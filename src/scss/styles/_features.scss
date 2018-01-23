@@ -1,0 +1,50 @@
+// Features
+
+.features {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include breakpoint(m) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+.feature-title {
+  display: inline-block;
+  position: relative;
+  &:after {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background: $dark-grey;
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: $grey;
+  @include breakpoint(l) {
+    padding-top: 30px;
+  }
+}
+
+.icon:before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 20px auto;
+}
+.icon-strength:before {
+  background: url(../img/strength.svg) 50% 50% no-repeat;
+}
+.icon-watch:before {
+  background: url(../img/watch.svg) 50% 50% no-repeat;
+}
+.icon-moving:before {
+  background: url(../img/moving.svg) 50% 50% no-repeat;
+}

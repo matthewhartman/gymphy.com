@@ -1,0 +1,18 @@
+// Footer
+
+.footer {
+  font-size: 13px;
+  line-height: 18px;
+  padding-top: 40px;
+  padding-bottom: 20px;  
+  @include breakpoint(l) {
+    padding-top: 60px;
+  }
+  text-align: center;
+  background: $dark-grey;
+  color: $lightest-grey;
+}
+
+.footer-logo {
+  display: inline-block;
+}

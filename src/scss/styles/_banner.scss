@@ -1,0 +1,43 @@
+// Banner
+
+.banner {
+  background: $red;
+  color: $white;
+  height: 460px;
+  overflow: hidden;
+  padding-top: 40px;
+}
+.banner-content {
+  padding-top: 80px;
+  width: 75%;
+}
+.banner-title {
+  color: $white;
+}
+
+.phone {
+  width: 300px;
+  height: 500px;
+  border-radius: 20px;
+  background: #fff;
+}
+.phone-inner {
+  background: $lightest-grey;
+  width: 270px;
+  height: 480px;
+  position: relative;
+  top: 20px;
+  left: 15px;
+}
+
+.banner-button {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 24px;
+  background: transparent;
+  color: $white;
+  border: 2px solid $white;
+}
