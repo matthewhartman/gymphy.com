@@ -3,17 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Gymphy</title>
-
-  <meta name="description" content="">
-  <meta name="theme-color" content="#ff473a">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img/favicon.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+  <title>Gymphy - Create Shareable Workout</title>
+  <meta name="description" content="Create quick and simple workouts that you can share with your students, friends or family.">
+  <meta name="theme-color" content="#ff473a">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff473a">
 
-  <link rel="stylesheet" href="css/styles.css">
+  <link inline rel="stylesheet" href="css/styles.css">
 
 </head>
 <body>
@@ -25,11 +24,11 @@
           <span class="sr">Gymphy</span>
         </a>
       </div>
-      <div class="clear row-l">
+      <div class="clear row-m">
         <div class="col-8-m">
           <div class="banner-content">
-            <h1 class="fs-3 banner-title">Create Shareable Workouts</h1>
-            <div class="col-8-l no-float no-padding">
+            <h1 class="banner-title">Create Shareable Workouts</h1>
+            <div class="banner-content-inner">
               <p class="pad-top-20 pad-bottom-20">
                 Create quick and simple workouts that you can share with your students, friends or family.
               </p>
@@ -42,7 +41,10 @@
         <div class="col-4-m">
           <div class="phone">
             <div class="phone-inner">
-              <video class="banner-video" loop autoplay>
+              <button class="banner-play" id="play" onclick="vidplay()">
+                <span class="sr">Play</span>
+              </button>
+              <video id="demo" class="banner-video" loop>
                 <source src="video/gymphy.mp4">
               </video>
             </div>
@@ -56,22 +58,22 @@
     <div class="container">
       <h2 class="fs-3 feature-title">How it Works</h2>
       <ul class="clear feature-list">
-        <li class="col-1-3-m icon icon-strength">
+        <li class="feature-item icon icon-strength">
           <h3 class="font-600 fs-5">Create Workouts</h3>
           <p class="col-9 no-float no-padding center">
-            Name your workout, add rounds with sets, add exercises, breaks and get moving
+            Give it a name, add rounds with sets, add exercises, breaks and get active
           </p>
         </li>
-        <li class="col-1-3-m icon icon-moving">
+        <li class="feature-item icon icon-moving">
           <h3 class="font-600 fs-5">Get Moving</h3>
           <p class="col-9 no-float no-padding center">
             Once you have created your workout, get busy and smash through it as quickly as you can
           </p>
         </li>
-        <li class="col-1-3-m icon icon-watch">
+        <li class="feature-item icon icon-watch">
           <h3 class="font-600 fs-5">Share Workouts</h3>
           <p class="col-9 no-float no-padding center">
-            Once you have completed your workout, send it to your friends, students or family
+            After completing your workout, share it and compete with your friends and family
           </p>
         </li>
       </ul>

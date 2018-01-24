@@ -1,1 +1,1 @@
-WebFont.load({google:{families:["Montserrat:300,400,500,600,700"]}});
+function vidplay(){var e=document.getElementById("demo"),a=document.getElementById("play");e.paused?(e.play(),a.classList.add("play")):(e.pause(),a.classList.remove("play"))}WebFont.load({google:{families:["Montserrat:300,400,500,600,700"]}});

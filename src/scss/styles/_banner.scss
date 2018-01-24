@@ -2,8 +2,6 @@
 
 .banner-container {
   width: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
   margin: 0 auto;
   text-align: center;
   @include breakpoint(m) {
@@ -18,27 +16,45 @@
 }
 
 .banner {
+  padding-left: 20px;
+  padding-right: 20px;
   height: 880px;
   background: $red;
   color: $white;
   padding-top: 40px;
   overflow: hidden;
   @include breakpoint(m) {
+    padding-left: 0;
+    padding-right: 0;
     height: 475px;
   }
 }
 .banner-content {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 40px;
   @include breakpoint(m) {
     width: 75%;
+    padding-top: 60px;
     padding-bottom: 0;
   }
   @include breakpoint(l) {
+    width: 100%;
   }
 }
 .banner-title {
+  font-size: 40px;
+  line-height: 48px;
   color: $white;
+  @include breakpoint(m) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.banner-content-inner {
+  @include breakpoint(l) {
+    width: 75%;
+  }
 }
 
 .banner-video {
@@ -83,6 +99,37 @@
     width: 245px;
     height: 415px;
   }
+}
+
+.banner-play {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  border: 0;
+  @include background-alpha($black, 50%);
+  z-index: 1000;
+  transition: .2s all;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -20px;
+    margin-top: -40px;
+    border-color: transparent transparent transparent $white;
+    transition: 100ms all ease;
+    cursor: pointer;
+    border-style: solid;
+    border-width: 40px 0 40px 60px;
+    transition: .2s all;
+  }
+}
+.play {
+  opacity: 0;
 }
 
 .banner-button {
