@@ -1465,33 +1465,84 @@ input:-ms-input-placeholder {
   background: #fff;
   border-radius: 100px; }
 
+.banner-container {
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0 auto;
+  text-align: center; }
+  @media only screen and (min-width: 740px) {
+    .banner-container {
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: left;
+      width: 100%; } }
+  @media only screen and (min-width: 980px) {
+    .banner-container {
+      width: 75%; } }
+
 .banner {
+  height: 880px;
   background: #ff473a;
   color: #fff;
-  height: 460px;
-  overflow: hidden;
-  padding-top: 40px; }
+  padding-top: 40px;
+  overflow: hidden; }
+  @media only screen and (min-width: 740px) {
+    .banner {
+      height: 475px; } }
 
 .banner-content {
   padding-top: 80px;
-  width: 75%; }
+  padding-bottom: 40px; }
+  @media only screen and (min-width: 740px) {
+    .banner-content {
+      width: 75%;
+      padding-bottom: 0; } }
 
 .banner-title {
   color: #fff; }
 
+.banner-video {
+  top: -1px;
+  left: -1px;
+  position: relative;
+  display: block;
+  width: 230px;
+  height: 410px; }
+  @media only screen and (min-width: 740px) {
+    .banner-video {
+      width: 245px;
+      height: 440px; } }
+
 .phone {
-  width: 300px;
-  height: 500px;
+  width: 260px;
+  height: 440px;
+  margin: 0 auto;
   border-radius: 20px;
-  background: #fff; }
+  background: #f1f1f1;
+  border: 1px solid #454545; }
+  @media only screen and (min-width: 740px) {
+    .phone {
+      width: 277px;
+      height: 480px;
+      position: relative;
+      top: -50px; } }
 
 .phone-inner {
-  background: #f1f1f1;
-  width: 270px;
-  height: 480px;
+  width: 230px;
+  height: 390px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
   position: relative;
   top: 20px;
-  left: 15px; }
+  left: 14px;
+  overflow: hidden; }
+  @media only screen and (min-width: 740px) {
+    .phone-inner {
+      left: 15px;
+      width: 245px;
+      height: 415px; } }
 
 .banner-button {
   font-size: 13px;
