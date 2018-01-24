@@ -45,6 +45,21 @@
   }
 }
 
+.feature-item-title {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.feature-item-content {
+  padding-left: 30px;
+  padding-right: 30px;
+  @include breakpoint(l) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
 .icon:before {
   content: '';
   width: 80px;

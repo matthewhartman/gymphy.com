@@ -18,7 +18,7 @@
 .banner {
   padding-left: 20px;
   padding-right: 20px;
-  height: 880px;
+  height: 850px;
   background: $red;
   color: $white;
   padding-top: 40px;
@@ -26,34 +26,58 @@
   @include breakpoint(m) {
     padding-left: 0;
     padding-right: 0;
-    height: 475px;
-  }
-}
-.banner-content {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  @include breakpoint(m) {
-    width: 75%;
-    padding-top: 60px;
-    padding-bottom: 0;
+    height: 485px;
   }
   @include breakpoint(l) {
-    width: 100%;
-  }
-}
-.banner-title {
-  font-size: 40px;
-  line-height: 48px;
-  color: $white;
-  @include breakpoint(m) {
-    font-size: 22px;
-    line-height: 28px;
+    height: 540px;
   }
 }
 
-.banner-content-inner {
+.banner-col-1 {
+  @include breakpoint(m) {
+    float: left;
+    width: 65%;
+  }
   @include breakpoint(l) {
+    width: 70%;
+  }
+}
+.banner-col-2 {
+  @include breakpoint(m) {
+    float: right;
+    width: 35%;
+  }
+  @include breakpoint(l) {
+    width: 30%;
+  }
+}
+
+.banner-content {
+  padding-top: 40px;
+  @include breakpoint(m) {
+  padding-bottom: 40px;
+    width: 80%;
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+  @include breakpoint(xl) {
+    width: 70%;
+  }
+}
+.banner-title {
+  font-size: 36px;
+  line-height: 44px;
+  color: $white;
+}
+
+.banner-content-inner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include breakpoint(m) {
     width: 75%;
+  }
+  @include breakpoint(l) {
+    width: 80%;
   }
 }
 
@@ -67,6 +91,10 @@
   @include breakpoint(m) {
     width: 245px;
     height: 440px;
+  }
+  @include breakpoint(l) {
+    width: 280px;
+    height: 500px;
   }
 }
 
@@ -83,10 +111,16 @@
     position: relative;
     top: -50px;
   }
+  @include breakpoint(l) {
+    width: 312px;
+    height: 520px;
+    position: relative;
+    top: -50px;
+  }
 }
 .phone-inner {
   width: 230px;
-  height: 390px;
+  height: 400px;
   border-top: 1px solid $light-grey;
   border-left: 1px solid $light-grey;
   border-right: 1px solid $light-grey;
@@ -98,6 +132,10 @@
     left: 15px;
     width: 245px;
     height: 415px;
+  }
+  @include breakpoint(l) {
+    width: 280px;
+    height: 500px;
   }
 }
 
@@ -133,13 +171,18 @@
 }
 
 .banner-button {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
-  font-weight: 600;
+  font-weight: 700;
   border: 0;
+  margin-top: 10px;
   border-radius: 5px;
   padding: 14px 24px;
-  background: transparent;
-  color: $white;
+  background: $white;
+  color: $red;
   border: 2px solid $white;
+  &:hover {
+    background: transparent;
+    color: $white;
+  }
 }

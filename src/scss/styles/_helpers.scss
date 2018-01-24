@@ -1,0 +1,40 @@
+// Helpers
+
+.clear:before, .clear:after { content: " "; display: table; } .clear:after { clear: both; }
+.row:before, .row:after { content: ""; display: table; } .row:after { clear: both; }
+
+// Rows
+.row {
+  position: relative;
+  margin-left: -$grid-gutter;
+  margin-right: -$grid-gutter;
+}
+
+// Hide only visually, but have it available for screenreaders: : h5bp.com/v
+.sr {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Containers
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @include breakpoint(m) {
+    width: 720px;
+  }
+  @include breakpoint(l) {
+    width: 960px;
+  }
+  @include breakpoint(xl) {
+    width: 1120px;
+  }
+}

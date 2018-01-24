@@ -6,13 +6,20 @@
 @import "styles/variables-colors";
 
 // Import Base
-@import "node_modules/getbase/scss/base";
+@import "node_modules/getbase/scss/base/variables";
+
+@import "node_modules/getbase/scss/base/mixins";
+@import "node_modules/getbase/scss/base/resets";
+
+@import "node_modules/getbase/scss/base/typography";
+@import "node_modules/getbase/scss/base/buttons";
 
 // Overall Styles
+@import "styles/helpers";
 @import "styles/header";
 @import "styles/banner";
 @import "styles/features";
 @import "styles/footer";
 
 // Base Helpers
-@import "node_modules/getbase/scss/base/_helpers";
+// @import "node_modules/getbase/scss/base/_helpers";
