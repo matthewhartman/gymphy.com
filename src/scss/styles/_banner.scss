@@ -43,7 +43,7 @@
   color: $white;
   @include breakpoint(m) {
     width: 50%;
-    padding-top: 100px;
+    padding-top: 120px;
   }
   @include breakpoint(xl) {
     width: 50%;

@@ -1,0 +1,63 @@
+// Overview
+
+.overview {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include breakpoint(m) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.overview-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include breakpoint(m) {
+    display: flex;
+  }
+}
+
+.overview-item {
+  font-size: 14px;
+  line-height: 20px;
+  @include breakpoint(m) {
+    width: 33.333333%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.overview-item-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.overview-item-content {
+  padding-left: 30px;
+  padding-right: 30px;
+  @include breakpoint(l) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+
+.icon:before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 20px auto;
+}
+.icon-strength:before {
+  background: url(../img/strength.svg) 50% 50% no-repeat;
+}
+.icon-watch:before {
+  background: url(../img/watch.svg) 50% 50% no-repeat;
+}
+.icon-moving:before {
+  background: url(../img/moving.svg) 50% 50% no-repeat;
+}

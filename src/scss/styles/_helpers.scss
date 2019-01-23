@@ -38,3 +38,16 @@
     width: 1120px;
   }
 }
+
+.title {
+  display: inline-block;
+  position: relative;
+  &:after {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background: $dark-grey;
+    display: block;
+    margin: 10px auto;
+  }
+}
