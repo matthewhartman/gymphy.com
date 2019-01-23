@@ -12,8 +12,6 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
   <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff473a">
 
-  <link inline rel="stylesheet" href="css/styles.css">
-
 </head>
 <body>
 
@@ -21,33 +19,34 @@
     <div class="banner-container">
       <div class="header">
         <a class="logo" href="/">
-          <span class="sr">Gymphy</span>
+          Gymphy
         </a>
+        <nav class="menu">
+          <a class="menu-item" href="#">Overview</a>
+          <a class="menu-item" href="#">Features</a>
+          <a class="menu-item" href="#">Sign up</a>
+        </nav>
       </div>
-      <div class="clear row-m">
-        <div class="banner-col-1">
-          <div class="banner-content">
-            <h1 class="banner-title">Create Shareable Workouts</h1>
-            <div class="banner-content-inner">
-              <p>
-                Create quick and simple workout plans that you can share with your friends, family or students.
-              </p>
-              <p>
-                <a class="banner-button button" href="https://gymphy.co/">Launch Gymphy App</a>
-              </p>
-            </div>
+      <div class="banner-inner">
+        <div class="banner-content">
+          <h1 class="banner-title">Create Shareable Workouts.</h1>
+          <div class="banner-content-inner">
+            <p>
+              Create quick and simple workout plans that you can share with your friends, family or students.
+            </p>
+            <p>
+              <a class="banner-button button" href="https://gymphy.co/">Launch App</a>
+            </p>
           </div>
         </div>
-        <div class="banner-col-2">
-          <div class="phone">
-            <div class="phone-inner">
-              <button class="banner-play" id="play" onclick="vidplay()">
-                <span class="sr">Play</span>
-              </button>
-              <video id="demo" class="banner-video" loop>
-                <source src="video/gymphy.mp4">
-              </video>
-            </div>
+        <div class="phone">
+          <div class="video">
+            <button class="banner-play" id="play">
+              <span class="sr">Play</span>
+            </button>
+            <video id="demo" class="banner-video" loop>
+              <source src="video/gymphy.mp4">
+            </video>
           </div>
         </div>
       </div>
@@ -82,19 +81,11 @@
 
   <div class="footer">
     <div class="container">
-      <p>
-        <a class="logo footer-logo" href="/">
-          <span class="sr">Gymphy</span>
-        </a>
-      </p>
       <p class="no-margin">
-        Copyright 2018 Gymphy. All Rights Reserved.
+        Copyright 2019 Gymphy. All Rights Reserved.
       </p>
     </div>
   </div>
-
-<script src="js/vendor/webfontloader.js"></script>
-<script src="js/default.js"></script>
 
 </body>
 </html>

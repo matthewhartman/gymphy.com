@@ -1,16 +1,16 @@
-// Default JavaScript Functions and Initiations
+import WebFont from 'webfontloader';
 
 // Load Custom Google Font
 WebFont.load({
   google: {
-    families: ['Montserrat:300,400,500,600,700']
+    families: ['Montserrat:300,400,500,600,700,900']
   }
 });
 
+var video = document.getElementById('demo');
+var button = document.getElementById('play');
 
-function vidplay () {
-   var video = document.getElementById('demo');
-   var button = document.getElementById('play');
+function playVideo () {
    if (video.paused) {
       video.play();
       button.classList.add('play');
@@ -19,3 +19,5 @@ function vidplay () {
       button.classList.remove('play');
    }
 }
+
+button.addEventListener('click', playVideo);
