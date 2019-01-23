@@ -1,22 +1,5 @@
 // Banner
 
-.banner-container {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  @include breakpoint(m) {
-    padding-left: 30px;
-    padding-right: 30px;
-    text-align: left;
-    width: $breakpoint-m;
-  }
-  @include breakpoint(l) {
-    padding-left: 60px;
-    padding-right: 60px;
-    width: $breakpoint-l;
-  }
-}
-
 .banner {
   padding: 60px 20px;
   background: $red;
@@ -25,10 +8,27 @@
     padding: 60px 0px;
   }
 }
+.banner-container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  @include breakpoint(m) {
+    text-align: left;
+    width: $breakpoint-m;
+  }
+  @include breakpoint(l) {
+    width: $breakpoint-l;
+  }
+}
 
 .banner-inner {
   @include breakpoint(m) {
-    display: flex;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  @include breakpoint(l) {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -61,17 +61,43 @@
   display: none;
   @include breakpoint(m) {
     display: block;
-    width: 220px;
-    height: 320px;
+    width: 224px;
+    height: 400px;
     background: $white;
     position: relative;
     margin-top: 100px;
     margin-left: auto;
+    border: 2px solid $black;
+    border-radius: 10px;
+  }
+  &:before, &:after {
+    content: '';
+    display: block;
+    background: #111;
+    position: absolute;    
+  }
+  &:before {
+    width: 2px;
+    height: 130px;
+    border-radius: 10px;
+    top: 8%;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(17,17,17,0) 14%,rgba(17,17,17,1) 15%,rgba(17,17,17,1) 40%,rgba(17,17,17,0) 41%,rgba(17,17,17,0) 50%,rgba(17,17,17,1) 51%,rgba(17,17,17,1) 70%,rgba(17,17,17,0) 71%,rgba(17,17,17,0) 74%,rgba(17,17,17,1) 75%,rgba(17,17,17,1) 95%,rgba(17,17,17,0) 96%);
+    margin-right: -4px;
+  }
+  &:after {
+    width: 50px;
+    height: 2px;
+    border-radius: 10px;
+    display: block;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 14px;
   }
 }
 .video, .banner-video {
   width: 200px;
-  height: 300px;
+  height: 355px;
 }
 .video {
   position: relative;

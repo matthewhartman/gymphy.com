@@ -13,7 +13,7 @@
   }
 }
 .menu-item {
-  margin: 0 8px;
+  margin-left: 12px;
   color: $white;
   font-weight: 600;
   text-decoration: none;
@@ -36,7 +36,7 @@
     }
   }
   @include breakpoint(m) {
-    margin: 0 16px;
+    margin-left: 30px;
   }
 }
 
