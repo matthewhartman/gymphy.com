@@ -58,6 +58,12 @@
   font-weight: 600;
   color: $white;
 }
+.feature-link {
+  color: #fff;
+  &:hover, &:focus {
+    color: #fff;
+  }
+}
 
 .feature-icon:before {
   content: '';
@@ -78,4 +84,12 @@
 }
 .feature-icon-shoe:before {
   background: url(../img/shoe.svg) 50% 50% no-repeat;
+}
+.feature-icon-headphones:before {
+  background: url(../img/headphones.svg) 50% 50% no-repeat;
+}
+.feature-icon-laptop:before {
+  background: url(../img/laptop.svg) 50% 50% no-repeat;
+  position: relative;
+  transform: translate(0, 10px);
 }
