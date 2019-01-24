@@ -34,9 +34,16 @@
   line-height: 20px;
   position: relative;
   text-align: left;
-  padding: 16px 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 100px;
+  padding-right: 20px;
   @include breakpoint(m) {
     width: 50%;
+    padding-right: 40px;
+  }
+  @include breakpoint(l) {
+    padding-right: 40px;
   }
 }
 
@@ -46,17 +53,7 @@
   font-weight: 600;
 }
 
-.icon {
-  padding-left: 100px;
-  padding-right: 20px;
-  @include breakpoint(m) {
-    padding-right: 40px;
-  }
-  @include breakpoint(l) {
-    padding-right: 40px;
-  }
-}
-.icon:before {
+.overview-icon:before {
   content: '';
   width: 80px;
   height: 80px;
@@ -66,15 +63,15 @@
   left: 0;
   top: 15px;
 }
-.icon-top:before {
+.overview-icon-top:before {
   background: url(../img/top.svg) 50% 50% no-repeat;
 }
-.icon-strength:before {
+.overview-icon-strength:before {
   background: url(../img/strength.svg) 50% 50% no-repeat;
 }
-.icon-watch:before {
+.overview-icon-watch:before {
   background: url(../img/watch.svg) 50% 50% no-repeat;
 }
-.icon-timer:before {
-  background: url(../img/timer.svg) 50% 50% no-repeat;
+.overview-icon-whistle:before {
+  background: url(../img/whistle.svg) 50% 50% no-repeat;
 }
