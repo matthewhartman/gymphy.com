@@ -8,7 +8,7 @@
   color: $white;
   @include breakpoint(m) {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
   }
   .title {
     color: $white;
@@ -16,4 +16,23 @@
       background: $white;
     }
   }
+}
+
+.action-block-inner {
+  padding: 20px;
+  @include breakpoint(m) {
+    padding: 20px 100px;
+  }
+  @include breakpoint(l) {
+    padding: 20px 100px;
+  }
+}
+
+.action-button {
+  background: $black;
+  color: $white;
+  border-radius: 30px;
+  border: 0;
+  padding: 20px 60px;
+  display: inline-block;
 }

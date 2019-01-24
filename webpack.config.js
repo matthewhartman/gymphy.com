@@ -69,7 +69,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyWebpackPlugin([ { from: './src/img/', to: 'img' } ], {}),
+    new CopyWebpackPlugin([ { from: './src/img/', to: 'img' }, { from: './src/video/', to: 'video' } ], {}),
     new UglifyJSPlugin(),
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
