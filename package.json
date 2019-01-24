@@ -40,17 +40,9 @@
     "webpack-livereload-plugin": "^2.1.1"
   },
   "dependencies": {
-    "@getbase/animations": "^4.1.0",
     "@getbase/base": "^4.1.0",
-    "@getbase/buttons": "^4.1.0",
     "@getbase/containers": "^4.1.0",
-    "@getbase/forms": "^4.1.0",
-    "@getbase/grid": "^4.1.0",
-    "@getbase/layout-helpers": "^4.1.0",
-    "@getbase/layout-spacers": "^4.1.0",
-    "@getbase/tables": "^4.1.0",
     "@getbase/typography": "^4.1.0",
-    "@getbase/typography-helpers": "^4.1.0",
     "webfontloader": "^1.6.28"
   },
   "browserslist": [

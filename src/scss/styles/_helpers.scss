@@ -10,6 +10,12 @@
   margin-right: -$grid-gutter;
 }
 
+.flex-m {
+  @include breakpoint(m) {
+    display: flex;
+  }
+}
+
 // Hide only visually, but have it available for screenreaders: : h5bp.com/v
 .sr {
   border: 0;

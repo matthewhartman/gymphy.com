@@ -152,6 +152,7 @@
   display: inline-block;
   background: $black;
   color: $white;
+  -webkit-appearance: none;
   &:hover, &:focus {
     background: $white;
     color: $black;

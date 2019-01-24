@@ -35,4 +35,10 @@
   border: 0;
   padding: 20px 60px;
   display: inline-block;
+  -webkit-appearance: none;
+  &:hover, &:focus {
+    background: $white;
+    color: $black;
+    text-decoration: none;
+  }
 }
