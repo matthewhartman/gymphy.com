@@ -9,23 +9,34 @@
     padding-bottom: 80px;
   }
 }
-
+.overview-inner {
+  color: $grey;
+  padding: 20px;
+  @include breakpoint(m) {
+    padding: 20px 100px;
+  }
+}
 .overview-list {
   list-style: none;
   padding: 0;
   margin: 0;
   @include breakpoint(m) {
     display: flex;
+    flex-wrap: wrap;
+  }
+  @include breakpoint(l) {
+    padding: 0 100px;
   }
 }
 
 .overview-item {
   font-size: 14px;
   line-height: 20px;
+  position: relative;
+  text-align: left;
+  padding: 16px 0;
   @include breakpoint(m) {
-    width: 33.333333%;
-    padding-left: 0px;
-    padding-right: 0px;
+    width: 50%;
   }
 }
 
@@ -35,22 +46,28 @@
   font-weight: 600;
 }
 
-.overview-item-content {
-  padding-left: 30px;
-  padding-right: 30px;
+.icon {
+  padding-left: 100px;
+  padding-right: 20px;
+  @include breakpoint(m) {
+    padding-right: 40px;
+  }
   @include breakpoint(l) {
-    padding-left: 40px;
     padding-right: 40px;
   }
 }
-
-
 .icon:before {
   content: '';
   width: 80px;
   height: 80px;
   display: block;
-  margin: 20px auto;
+  padding-left: 100px;
+  position: absolute;
+  left: 0;
+  top: 15px;
+}
+.icon-top:before {
+  background: url(../img/top.svg) 50% 50% no-repeat;
 }
 .icon-strength:before {
   background: url(../img/strength.svg) 50% 50% no-repeat;
@@ -58,6 +75,6 @@
 .icon-watch:before {
   background: url(../img/watch.svg) 50% 50% no-repeat;
 }
-.icon-moving:before {
-  background: url(../img/moving.svg) 50% 50% no-repeat;
+.icon-timer:before {
+  background: url(../img/timer.svg) 50% 50% no-repeat;
 }

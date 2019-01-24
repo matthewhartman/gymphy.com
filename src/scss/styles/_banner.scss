@@ -33,12 +33,14 @@
 }
 
 .banner-title {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 38px;
+  line-height: 48px;
   font-weight: 700;
   color: $white;
 }
 .banner-content {
+  font-size: 18px;
+  line-height: 26px;
   padding-top: 40px;
   color: $white;
   @include breakpoint(m) {
@@ -47,6 +49,7 @@
   }
   @include breakpoint(xl) {
     width: 50%;
+    padding-right: 120px;
   }
 }
 
@@ -69,6 +72,9 @@
     margin-left: auto;
     border: 2px solid $black;
     border-radius: 10px;
+  }
+  @include breakpoint(l) {
+    margin-right: 60px;
   }
   &:before, &:after {
     content: '';
