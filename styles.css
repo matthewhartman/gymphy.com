@@ -510,6 +510,9 @@ blockquote,
     display: block;
     margin: 10px auto; }
 
+.title-secondary {
+  color: #fff; }
+
 .button {
   text-decoration: none;
   transition: .3s all; }
