@@ -7,13 +7,13 @@
 	<g>
 		<polygon fill="transparent" points="124,99.5 4,99.5 4,93.5 53,93.5 54,94.5 64,94.5 74,94.5 75,93.5 124,93.5 		"/>
 		<g>
-			<rect x="4" y="93.5" opacity="0.3" fill="#FFFFFF" width="6" height="6"/>
+			<rect x="4" y="93.5" opacity="0.3" fill="#AAAAAA" width="6" height="6"/>
 		</g>
 		<rect x="11" y="23.5" fill="transparent" width="106" height="70"/>
 		<g>
 			<polygon opacity="0.3" fill="transparent" points="117,24.5 117,23.5 11,23.5 11,93.5 13,93.5 16,28.5 			"/>
 		</g>
-		<rect x="16" y="28.5" fill="#FFFFFF" width="96" height="60"/>
+		<rect x="16" y="28.5" fill="#AAAAAA" width="96" height="60"/>
 	</g>
 	<g>
 		<path fill="#333333" d="M124,92h-5.5V23.5c0-0.8-0.7-1.5-1.5-1.5H11c-0.8,0-1.5,0.7-1.5,1.5V92H4c-0.8,0-1.5,0.7-1.5,1.5v6
