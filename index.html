@@ -681,18 +681,20 @@ blockquote,
       width: 80%; } }
 
 .phone {
-  display: none; }
+  width: 195px;
+  height: 345px;
+  display: block;
+  background: #fff;
+  position: relative;
+  border: 2px solid #212121;
+  border-radius: 10px;
+  margin-top: 50px; }
   @media only screen and (min-width: 768px) {
     .phone {
-      display: block;
       width: 224px;
       height: 400px;
-      background: #fff;
-      position: relative;
       margin-top: 100px;
-      margin-left: auto;
-      border: 2px solid #212121;
-      border-radius: 10px; } }
+      margin-left: auto; } }
   @media only screen and (min-width: 980px) {
     .phone {
       margin-right: 60px; } }
@@ -719,8 +721,12 @@ blockquote,
     bottom: 14px; }
 
 .video, .banner-video {
-  width: 200px;
-  height: 355px; }
+  width: 170px;
+  height: 300px; }
+  @media only screen and (min-width: 768px) {
+    .video, .banner-video {
+      width: 200px;
+      height: 355px; } }
 
 .video {
   position: relative;
