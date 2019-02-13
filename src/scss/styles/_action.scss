@@ -29,7 +29,7 @@
 }
 
 .action-button {
-  background: $black;
+  background: $dark-grey;
   color: $white;
   border-radius: 30px;
   border: 0;
@@ -38,7 +38,7 @@
   -webkit-appearance: none;
   &:hover, &:focus {
     background: $white;
-    color: $black;
+    color: $dark-grey;
     text-decoration: none;
   }
 }

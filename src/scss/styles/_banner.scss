@@ -3,7 +3,7 @@
 .banner {
   padding: 60px 20px;
   background: $red;
-  color: $black;
+  color: $dark-grey;
   @include breakpoint(m) {
     padding: 60px 0px;
   }
@@ -70,7 +70,7 @@
     position: relative;
     margin-top: 100px;
     margin-left: auto;
-    border: 2px solid $black;
+    border: 2px solid $dark-grey;
     border-radius: 10px;
   }
   @include breakpoint(l) {
@@ -118,7 +118,7 @@
   top: 0;
   left: 0;
   border: 0;
-  @include background-alpha($black, 50%);
+  @include background-alpha($dark-grey, 50%);
   z-index: 1000;
   transition: .2s all;
   &:before {
@@ -150,11 +150,11 @@
   border-radius: 30px;
   padding: 20px 60px;
   display: inline-block;
-  background: $black;
+  background: $dark-grey;
   color: $white;
   -webkit-appearance: none;
   &:hover, &:focus {
     background: $white;
-    color: $black;
+    color: $dark-grey;
   }
 }
