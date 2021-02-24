@@ -1,0 +1,49 @@
+.action-block {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #ff473a;
+  color: #fff;
+}
+.action-block .title {
+  color: #fff;
+}
+.action-block .title:after {
+  background: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .action-block {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+}
+
+.action-block-inner {
+  padding: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .action-block-inner {
+    padding: 20px 100px;
+  }
+}
+@media only screen and (min-width: 980px) {
+  .action-block-inner {
+    padding: 20px 100px;
+  }
+}
+
+.action-button {
+  background: #212121;
+  color: #fff;
+  border-radius: 30px;
+  border: 0;
+  padding: 20px 60px;
+  display: inline-block;
+  -webkit-appearance: none;
+}
+.action-button:hover, .action-button:focus {
+  background: #fff;
+  color: #212121;
+  text-decoration: none;
+}

@@ -1,987 +1,176 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gymphy - Create Shareable Workouts</title><meta name="description" content="Create custom workout plans that you can share with your friends, family or students."><meta name="theme-color" content="#ff473a"><link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png"><link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ff473a"><style type="text/css">/* ==========================================================================
-
-// Base Stylesheet - http://getbase.org
-// Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 4.1.3 - Last Updated: December 11, 2018
-
-========================================================================== */
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.sr {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-html {
-  line-height: 1.15;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
-
-/* Sections
-   ========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
-body {
-  margin: 0; }
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */ }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a {
-  background-color: transparent; }
-
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */ }
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-b,
-strong {
-  font-weight: bolder; }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
-
-/**
- * Add the correct font size in all browsers.
- */
-small {
-  font-size: 80%; }
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sub {
-  bottom: -0.25em; }
-
-sup {
-  top: -0.5em; }
-
-/* Embedded content
-   ========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
-img {
-  border-style: none; }
-
-/* Forms
-   ========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  line-height: 1.15;
-  /* 1 */
-  margin: 0;
-  /* 2 */ }
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button,
-input {
-  /* 1 */
-  overflow: visible; }
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button,
-select {
-  /* 1 */
-  text-transform: none; }
-
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button; }
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0; }
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
-
-/**
- * Correct the padding in Firefox.
- */
-fieldset {
-  padding: 0.35em 0.75em 0.625em; }
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */ }
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-progress {
-  vertical-align: baseline; }
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea {
-  overflow: auto; }
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type="checkbox"],
-[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */ }
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */ }
-
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details {
-  display: block; }
-
-/*
- * Add the correct display in all browsers.
- */
-summary {
-  display: list-item; }
-
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-template {
-  display: none; }
-
-/**
- * Add the correct display in IE 10.
- */
-[hidden] {
-  display: none; }
-
-/* ==========================================================================
-
-// Base Containers - http://getbase.org
-// Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 4.1.1 - Last Updated: December 11, 2018
-
-========================================================================== */
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.container, .container-full {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto; }
-
-@media only screen and (min-width: 768px) {
-  .container-m, .container-full-m {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto; }
-  .container, .container-m {
-    width: 748px; }
-  .container-full-m {
-    width: auto; } }
-
-@media only screen and (min-width: 980px) {
-  .container-l, .container-full-l {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto; }
-  .container, .container-l {
-    width: 960px; }
-  .container-full-l {
-    width: auto; } }
-
-@media only screen and (min-width: 1200px) {
-  .container-xl, .container-full-xl {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto; }
-  .container, .container-xl {
-    width: 1180px; }
-  .container-full-xl {
-    width: auto; } }
-
-/* ==========================================================================
-
-// Base Typography - http://getbase.org
-// Author: Matthew Hartman - http://www.matthewhartman.com.au/
-// Version: 4.1.0 - Last Updated: December 11, 2018
-
-========================================================================== */
-body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  color: #212121;
-  font-weight: 500;
-  background: #fff; }
-
-p {
-  margin: 0 0 20px 0; }
-
-a {
-  color: #ff473a;
-  text-decoration: underline;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects; }
-  a:hover {
-    color: #ff473a;
-    outline-width: 0;
-    text-decoration: none; }
-  a:active {
-    color: #000; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Montserrat", sans-serif;
-  margin: 0 0 .5em 0; }
-
-h1, .fs-1 {
-  font-size: 40px;
-  line-height: 46px; }
-
-h2, .fs-2 {
-  font-size: 30px;
-  line-height: 36px; }
-
-h3, .fs-3 {
-  font-size: 22px;
-  line-height: 28px; }
-
-h4, .fs-4 {
-  font-size: 18px;
-  line-height: 24px; }
-
-h5, .fs-5 {
-  font-size: 16px;
-  line-height: 22px; }
-
-h6, .fs-6 {
-  font-size: 14px;
-  line-height: 20px; }
-
-h1 {
-  color: #000;
-  font-weight: 700; }
-
-h2 {
-  color: #000;
-  font-weight: 700; }
-
-h3 {
-  color: #000;
-  font-weight: 500; }
-
-h4 {
-  color: #000;
-  font-weight: 500; }
-
-h5 {
-  color: #000;
-  font-weight: 500; }
-
-h6 {
-  color: #000;
-  font-weight: 500; }
-
-b, strong, .strong {
-  font-weight: 700; }
-
-em, .em {
-  font-style: italic; }
-
-hr, .hr {
-  height: 1px;
-  background: #eee;
-  border: 0;
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
-code, .code, kbd, .kbd, pre, .pre, samp, .samp {
-  font-family: monospace, monospace;
-  font-size: 13px;
-  line-height: 18px;
-  word-wrap: break-word;
-  color: #000;
-  background-color: #f7f7f7;
-  font-weight: normal;
-  padding: 0;
-  white-space: pre-wrap; }
-
-pre, .pre {
-  padding: 10px 0;
-  overflow: auto;
-  border: 1px solid #e7e7e7; }
-
-blockquote,
-.blockquote {
-  font-family: sans-serif;
-  font-style: italic;
-  margin: 20px 0; }
-  blockquote p,
-  .blockquote p {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 400;
-    margin-bottom: 20px; }
-  blockquote cite,
-  .blockquote cite {
-    font-size: 15px;
-    line-height: 15px;
-    font-weight: 700;
-    font-style: normal; }
-
-.title {
-  display: inline-block;
-  position: relative; }
-  .title:after {
-    content: '';
-    width: 20px;
-    height: 3px;
-    background: #212121;
-    display: block;
-    margin: 10px auto; }
-
-.title-secondary {
-  color: #fff; }
-
-.button {
-  text-decoration: none;
-  transition: .3s all; }
-
-.clear:before, .clear:after {
-  content: " ";
-  display: table; }
-
-.clear:after {
-  clear: both; }
-
-.row:before, .row:after {
-  content: "";
-  display: table; }
-
-.row:after {
-  clear: both; }
-
-.row {
-  position: relative;
-  margin-left: -15px;
-  margin-right: -15px; }
-
-@media only screen and (min-width: 768px) {
-  .flex-m {
-    display: flex; } }
-
-.sr {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-.container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto; }
-  @media only screen and (min-width: 768px) {
-    .container {
-      width: 720px; } }
-  @media only screen and (min-width: 980px) {
-    .container {
-      width: 960px; } }
-  @media only screen and (min-width: 1200px) {
-    .container {
-      width: 1120px; } }
-
-@media only screen and (min-width: 768px) {
-  .header {
-    display: flex;
-    align-items: center; } }
-
-.menu {
-  margin-top: 50px; }
-  @media only screen and (min-width: 768px) {
-    .menu {
-      margin-top: 0; } }
-
-.menu-item {
-  margin-right: 12px;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  transition: .2s all;
-  position: relative;
-  display: inline-block; }
-  .menu-item:after {
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    display: block;
-    transform: scaleX(0);
-    transition: .2s all; }
-  .menu-item:hover {
-    color: #fff; }
-    .menu-item:hover:after {
-      transform: scaleX(1); }
-  @media only screen and (min-width: 768px) {
-    .menu-item {
-      margin-left: 30px;
-      margin-right: 0; } }
-
-.logo {
-  margin-right: auto;
-  font-size: 36px;
-  line-height: 40px;
-  font-weight: 900;
-  color: #fff;
-  text-decoration: none;
-  position: relative;
-  padding-left: 80px;
-  transition: .3s all; }
-  .logo:hover {
-    color: #fff; }
-  .logo:before {
-    content: '';
-    width: 55px;
-    height: 80px;
-    display: block;
-    position: absolute;
-    top: 50%;
-    margin-top: -45px;
-    left: 0;
-    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTUiIGhlaWdodD0iNzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTQ4LjcwNyAyNS4xOTJjMS45ODItNC40MTYgMy40MDItMTAuMTQgMS4wNjctMTUuMjdDNDcuMDQ5IDMuOTM3IDQwLjA2NC42IDI5LjAxNy4wMDVMMjYuNTc3IDBsLS4xODguMDA1QzE1LjM0LjYgOC4zNTcgMy45MzcgNS42MzMgOS45MjJjLTIuMjY2IDQuOTc4LS45OTUgMTAuNTE0Ljg5MyAxNC44NzNBMjcuMzMgMjcuMzMgMCAwIDAgMCA0Mi41NTJDMCA1Ny43MTIgMTIuMjg5IDcwIDI3LjQ0OCA3MHMyNy40NDgtMTIuMjg5IDI3LjQ0OC0yNy40NDhjMC02LjU4Ny0yLjMyMi0xMi42My02LjE4OS0xNy4zNnpNMTIuMTAyIDE5Ljc5Yy0uNzcyLTIuNDUtMS4wNDUtNC45NjgtLjEyMi02Ljk4OCAxLjk0Mi00LjI0OCA5LjA0LTUuNTE3IDE0LjY5Mi01LjgzaDIuMDYxYzUuNjUxLjMxMyAxMi43NSAxLjU4MiAxNC42OTIgNS44My45NiAyLjEuNjMxIDQuNzQzLS4yMTUgNy4yODVhMjcuMzEgMjcuMzEgMCAwIDAtMTUuNzYyLTQuOTgzIDI3LjMyMiAyNy4zMjIgMCAwIDAtMTUuMzQ2IDQuNjg2eiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0zNC42NjEgNDEuNzE4aDIuMTgzdjguMjA4Yy0xLjAwNC44ODEtMi4xOTMgMS41NTctMy41NjYgMi4wMjlhMTMuMjU5IDEzLjI1OSAwIDAgMS00LjMzNS43MDdjLTIuMTUyIDAtNC4wODgtLjQ3Mi01LjgxLTEuNDE0LTEuNzIxLS45NDMtMy4wNzQtMi4yNDQtNC4wNTgtMy45MDUtLjk4My0xLjY4LTEuNDc1LTMuNTU1LTEuNDc1LTUuNjI1cy40OTEtMy45MzUgMS40NzUtNS41OTVhMTAuNDA0IDEwLjQwNCAwIDAgMSA0LjA1OC0zLjkzNWMxLjcyMi0uOTQzIDMuNjY5LTEuNDE0IDUuODQxLTEuNDE0IDEuNjQgMCAzLjE0Ni4yNjYgNC41Mi43OTkgMS4zNzIuNTEyIDIuNTMgMS4yOCAzLjQ3MyAyLjMwNmwtMS40MTQgMS40NDRjLTEuNzAxLTEuNjgtMy44NjMtMi41Mi02LjQ4Ny0yLjUyLTEuNzQyIDAtMy4zMi4zODktNC43MzQgMS4xNjhhOC4zNjIgOC4zNjIgMCAwIDAtMy4yOSAzLjE5N2MtLjc5OSAxLjM1My0xLjE5OCAyLjg3LTEuMTk4IDQuNTUgMCAxLjY4LjQgMy4xOTcgMS4xOTkgNC41NWE4LjY0OSA4LjY0OSAwIDAgMCAzLjI5IDMuMTk3YzEuMzkzLjc3OCAyLjk2IDEuMTY4IDQuNzAzIDEuMTY4IDIuMjEzIDAgNC4wODgtLjU1NCA1LjYyNS0xLjY2di03LjI1NXoiIGZpbGw9IiNGRjMzMzkiLz48L3N2Zz4=) 50% 50% no-repeat; }
-
-.banner {
-  padding: 60px 20px;
-  background: #ff473a;
-  color: #212121;
-  text-align: center; }
-  @media only screen and (min-width: 768px) {
-    .banner {
-      padding: 60px 0px;
-      text-align: left; } }
-
-.banner-container {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center; }
-  @media only screen and (min-width: 768px) {
-    .banner-container {
-      text-align: left;
-      width: 768px; } }
-  @media only screen and (min-width: 980px) {
-    .banner-container {
-      width: 980px; } }
-
-@media only screen and (min-width: 768px) {
-  .banner-inner {
-    padding-left: 12px;
-    padding-right: 12px; } }
-
-@media only screen and (min-width: 980px) {
-  .banner-inner {
-    padding-left: 20px;
-    padding-right: 20px; } }
-
-.banner-title {
-  font-size: 38px;
-  line-height: 48px;
-  font-weight: 700;
-  color: #fff; }
-
-.banner-content {
-  font-size: 18px;
-  line-height: 26px;
-  padding: 40px 20px 0 20px;
-  color: #fff; }
-  @media only screen and (min-width: 768px) {
-    .banner-content {
-      width: 50%;
-      padding: 120px 0 0 0; } }
-  @media only screen and (min-width: 1200px) {
-    .banner-content {
-      width: 50%;
-      padding-right: 120px; } }
-
-.banner-content-inner {
-  padding-top: 20px; }
-  @media only screen and (min-width: 980px) {
-    .banner-content-inner {
-      width: 80%; } }
-
-.phone {
-  width: 240px;
-  height: 430px;
-  display: block;
-  background: #fff;
-  position: relative;
-  border: 2px solid #212121;
-  border-radius: 10px;
-  margin: 50px auto 0 auto;
-  padding: 10px; }
-  @media only screen and (min-width: 768px) {
-    .phone {
-      width: 224px;
-      height: 400px;
-      margin: 100px 0 0 auto; } }
-  @media only screen and (min-width: 980px) {
-    .phone {
-      margin-right: 60px; } }
-  .phone:before, .phone:after {
-    content: '';
-    display: block;
-    background: #111;
-    position: absolute; }
-  .phone:before {
-    width: 2px;
-    height: 130px;
-    border-radius: 10px;
-    top: 8%;
-    right: 0;
-    background: linear-gradient(to bottom, rgba(17, 17, 17, 0) 14%, #111111 15%, #111111 40%, rgba(17, 17, 17, 0) 41%, rgba(17, 17, 17, 0) 50%, #111111 51%, #111111 70%, rgba(17, 17, 17, 0) 71%, rgba(17, 17, 17, 0) 74%, #111111 75%, #111111 95%, rgba(17, 17, 17, 0) 96%);
-    margin-right: -4px; }
-  .phone:after {
-    width: 50px;
-    height: 2px;
-    border-radius: 10px;
-    display: block;
-    left: 50%;
-    margin-left: -25px;
-    bottom: 14px; }
-
-.video, .banner-video {
-  width: 100%;
-  height: 385px; }
-  @media only screen and (min-width: 768px) {
-    .video, .banner-video {
-      height: 355px; } }
-
-.video {
-  position: relative; }
-
-.banner-play {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  border: 0;
-  background-color: #212121;
-  background-color: rgba(33, 33, 33, 0.5);
-  z-index: 1000;
-  transition: .2s all; }
-  .banner-play:before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: -20px;
-    margin-top: -40px;
-    border-color: transparent transparent transparent #fff;
-    transition: 100ms all ease;
-    cursor: pointer;
-    border-style: solid;
-    border-width: 40px 0 40px 60px;
-    transition: .2s all; }
-
-.play {
-  opacity: 0; }
-
-.banner-button {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 700;
-  border: 0;
-  margin-top: 20px;
-  border-radius: 30px;
-  padding: 20px 60px;
-  display: inline-block;
-  background: #212121;
-  color: #fff;
-  -webkit-appearance: none; }
-  .banner-button:hover, .banner-button:focus {
-    background: #fff;
-    color: #212121; }
-
-.overview {
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px; }
-  @media only screen and (min-width: 768px) {
-    .overview {
-      padding-top: 80px;
-      padding-bottom: 80px; } }
-
-.overview-inner {
-  color: #454545;
-  padding: 20px; }
-  @media only screen and (min-width: 768px) {
-    .overview-inner {
-      padding: 20px 100px; } }
-
-.overview-list {
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-  @media only screen and (min-width: 768px) {
-    .overview-list {
-      display: flex;
-      flex-wrap: wrap; } }
-  @media only screen and (min-width: 980px) {
-    .overview-list {
-      padding: 0 100px; } }
-
-.overview-item {
-  font-size: 14px;
-  line-height: 20px;
-  position: relative;
-  text-align: left;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 100px;
-  padding-right: 20px; }
-  @media only screen and (min-width: 768px) {
-    .overview-item {
-      width: 50%;
-      padding-right: 40px; } }
-  @media only screen and (min-width: 980px) {
-    .overview-item {
-      padding-right: 40px; } }
-
-.overview-item-title {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 600; }
-
-.overview-icon:before {
-  content: '';
-  width: 80px;
-  height: 80px;
-  display: block;
-  padding-left: 100px;
-  position: absolute;
-  left: 0;
-  top: 15px; }
-
-.overview-icon-top:before {
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjRjM3OTdCIiBkPSJNMTA0IDExNEgyNFY2NGM5LjQtNi4yIDE1LTE2LjggMTUtMjhWMTRoMTB2NWMwIDguMyA2LjcgMTUgMTUgMTVzMTUtNi43IDE1LTE1di01aDEwdjIyYzAgMTEuMyA1LjYgMjEuOCAxNSAyOHY1MHoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMTA0IDY0SDM5VjM2YzAgMTEuMy01LjYgMjEuOC0xNSAyOHY1MGgxNVY5NGg2NVY2NHoiLz48cGF0aCBmaWxsPSIjNDU0QjU0IiBkPSJNNTkuNCA4OC45Yy0xLjQtLjItMi40LTEuNi0yLjQtM1Y4MGgtMS45Yy0xLjUgMC0yLjgtMS0zLjEtMi40LS4zLTEuOSAxLjEtMy42IDMtMy42aC4xYzEgMCAxLjktLjggMS45LTEuOSAwLTEuNSAxLTIuOCAyLjQtMy4xIDEuOS0uNCAzLjYgMS4xIDMuNiAyLjl2MTRjMCAyLTEuNyAzLjQtMy42IDN6bTEzIDBjLTEuNC0uMi0yLjQtMS42LTIuNC0zVjgwaC0xLjljLTEuNSAwLTIuOC0xLTMuMS0yLjQtLjMtMS45IDEuMS0zLjYgMy0zLjZoLjFjMSAwIDEuOS0uOCAxLjktMS45IDAtMS41IDEtMi44IDIuNC0zLjEgMS45LS40IDMuNiAxLjEgMy42IDIuOXYxNGMwIDItMS43IDMuNC0zLjYgM3oiLz48cGF0aCBmaWxsPSIjNDU0QjU0IiBkPSJNMTA0IDExN0gyNGMtMS43IDAtMy0xLjMtMy0zVjY0YzAtMSAuNS0xLjkgMS4zLTIuNUMzMC45IDU1LjggMzYgNDYuMyAzNiAzNlYxNGMwLTEuNyAxLjMtMyAzLTNoMTBjMS43IDAgMyAxLjMgMyAzdjVjMCA2LjYgNS40IDEyIDEyIDEyczEyLTUuNCAxMi0xMnYtNWMwLTEuNyAxLjMtMyAzLTNoMTBjMS43IDAgMyAxLjMgMyAzdjIyYzAgMTAuMyA1LjEgMTkuOCAxMy43IDI1LjUuOC42IDEuMyAxLjUgMS4zIDIuNXY1MGMwIDEuNy0xLjMgMy0zIDN6bS03Ny02aDc0VjY1LjZDOTEuNiA1OC43IDg2IDQ3LjcgODYgMzZWMTdoLTR2MmMwIDkuOS04LjEgMTgtMTggMThzLTE4LTguMS0xOC0xOHYtMmgtNHYxOWMwIDExLjctNS42IDIyLjctMTUgMjkuNlYxMTF6Ii8+PC9zdmc+) 50% 50% no-repeat; }
-
-.overview-icon-strength:before {
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjRjM3OTdCIiBkPSJNNDQuOCA2Ny44aC0uNGMtMS42LS4yLTIuOC0xLjctMi42LTMuNGw1LjctNDEuMmMuMi0xLjYgMS43LTIuOCAzLjQtMi42IDEuNi4yIDIuOCAxLjcgMi42IDMuNGwtNS43IDQxLjJjLS4zIDEuNS0xLjUgMi42LTMgMi42eiIvPjxwYXRoIGZpbGw9IiNGMzc5N0IiIGQ9Ik02NCA0M2MtMi42IDAtNS4xLS42LTcuNC0xLjctMS41LS43LTIuMS0yLjUtMS40LTQgLjctMS41IDIuNS0yLjEgNC0xLjQgMS41LjcgMy4xIDEuMSA0LjcgMS4xIDYgMCAxMC44LTQuOCAxMC44LTEwLjhTNzAgMTUuNCA2NCAxNS40Yy01LjMgMC05LjkgNC0xMC43IDkuMy0uMiAxLjYtMS44IDIuOC0zLjQgMi41LTEuNi0uMi0yLjgtMS44LTIuNS0zLjRDNDguNSAxNS42IDU1LjcgOS40IDY0IDkuNGM5LjMgMCAxNi44IDcuNSAxNi44IDE2LjhTNzMuMyA0MyA2NCA0M3oiLz48cGF0aCBmaWxsPSIjOTc5RkFBIiBkPSJNMzUuODY0IDYzLjU5NEw1My42ODkgNjYuMWwtNi45NiA0OS41MTUtMTcuODI1LTIuNTA2eiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0yOC44OTcgMTEzLjAzOGw2Ljk2LTQ5LjUxNSA2LjkzMi45NzUtNi45NiA0OS41MTV6Ii8+PHBhdGggZmlsbD0iIzQ1NEI1NCIgZD0iTTQ2LjcgMTE4LjZoLS40bC0xNy44LTIuNWMtMS42LS4yLTIuOC0xLjctMi42LTMuNGw2LjUtNDYuNS0yLS4zYy0xLjUtLjItMi42LTEuNS0yLjYtM3YtLjRjLjItMS42IDEuNy0yLjggMy40LTIuNmw1IC43TDU0IDYzLjFoLjFsNC44LjdjMS41LjEgMi43IDEuNCAyLjcgM3MtMS4zIDMtMi45IDNoLS41bC0yLS4zLTYuNSA0Ni41Yy0uMS44LS41IDEuNS0xLjIgMi0uNS40LTEuMS42LTEuOC42em0tMTQuNC04LjFsMTEuOSAxLjcgNi4xLTQzLjZMMzguNCA2N2wtNi4xIDQzLjV6Ii8+PHBhdGggZmlsbD0iI0YzNzk3QiIgZD0iTTgzLjIgNjcuOGMtMS41IDAtMi43LTEuMS0zLTIuNkw3NyA0My41Yy0uMi0xLjYuOS0zLjIgMi41LTMuNCAxLjYtLjIgMy4yLjkgMy40IDIuNWwzLjIgMjEuOGMuMiAxLjYtLjkgMy4yLTIuNSAzLjRoLS40eiIvPjxwYXRoIGZpbGw9IiM5NzlGQUEiIGQ9Ik03NC4zMTggNjYuMDk2bDE3LjgyNi0yLjUwNiA2Ljk2IDQ5LjUxNS0xNy44MjYgMi41MDZ6Ii8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTgxLjI0IDExNS41MjVMNzQuMjggNjYuMDFsNi45MzMtLjk3NCA2Ljk2IDQ5LjUxNXoiLz48cGF0aCBmaWxsPSIjNDU0QjU0IiBkPSJNODEuMyAxMTguNmMtLjYgMC0xLjMtLjItMS44LS42LS42LS41LTEuMS0xLjItMS4yLTJsLTYuNS00Ni41LTIgLjNjLTEuNi4yLTMuMi0uOS0zLjQtMi42di0uNGMwLTEuNSAxLjEtMi44IDIuNi0zbDUtLjcgMjIuOC0zLjJjMS42LS4yIDMuMi45IDMuNCAyLjZ2LjRjMCAxLjUtMS4xIDIuOC0yLjYgM2wtMiAuMyA2LjUgNDYuNWMuMiAxLjYtLjkgMy4yLTIuNiAzLjRsLTE3LjggMi41aC0uNHptLTMuNi01MGw2LjEgNDMuNiAxMS45LTEuNy02LjEtNDMuNi0xMS45IDEuN3oiLz48L3N2Zz4=) 50% 50% no-repeat; }
-
-.overview-icon-watch:before {
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjRkZGIiBkPSJNODUgOTZINDFjLTUuNSAwLTEwLTQuNS0xMC0xMFY0MmMwLTUuNSA0LjUtMTAgMTAtMTBoNDRjNS41IDAgMTAgNC41IDEwIDEwdjQ0YzAgNS41LTQuNSAxMC0xMCAxMHoiLz48cGF0aCBmaWxsPSIjRjM3OTdCIiBkPSJNNjcuNCA1Ni4xYy0xLjggMC0zLjQuOC00LjQgMi4xLTEtMS4zLTIuNi0yLjEtNC40LTIuMS0zLjEgMC01LjYgMi41LTUuNiA1LjYgMCAzLjEgMS43IDUuOCAzLjMgNy40IDEuMyAxLjMgMy4yIDMuMiA2LjcgNC45IDMuNS0xLjcgNS40LTMuNiA2LjctNC45IDEuNi0xLjYgMy4zLTQuMyAzLjMtNy40IDAtMy4xLTIuNS01LjYtNS42LTUuNnoiLz48cGF0aCBmaWxsPSIjNTNDNUNFIiBkPSJNNzcgMTBINDljLTIuNiAwLTQuNyAxLjktNSA0LjVMNDMgMjRjLS4zIDMuMi0yIDYuMS00LjUgOGg0OWMtMi42LTEuOS00LjItNC44LTQuNS04bC0xLTkuNmMtLjMtMi41LTIuNC00LjQtNS00LjR6Ii8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTQ5IDMwYy44LTggNy42LTE0IDE1LjYtMTRoMTcuNWwtLjEtMS41Yy0uMy0yLjUtMi40LTQuNS01LTQuNUg0OWMtMi42IDAtNC43IDEuOS01IDQuNUw0MyAyNGMtLjMgMy4yLTIgNi4xLTQuNSA4aDEwLjFjLjItLjYuNC0xLjMuNC0yeiIvPjxwYXRoIGZpbGw9IiM0NTRCNTQiIGQ9Ik04Ny41IDM1Yy0uNiAwLTEuMy0uMi0xLjgtLjYtMy4yLTIuNC01LjMtNi4xLTUuNy0xMC4xbC0xLTkuNmMtLjEtMS0xLTEuOC0yLTEuOEg0OWMtMSAwLTEuOS44LTIgMS44bC0xIDkuNWMtLjQgNC0yLjUgNy43LTUuNyAxMC4xLTEuMyAxLTMuMi43LTQuMi0uNi0xLTEuMy0uNy0zLjIuNi00LjIgMS45LTEuNCAzLjEtMy42IDMuMy01LjlsMS05LjVjLjQtNC4xIDMuOS03LjIgOC03LjJoMjhjNC4xIDAgNy41IDMuMSA4IDcuMmwxIDkuNmMuMiAyLjMgMS41IDQuNSAzLjMgNS45IDEuMyAxIDEuNiAyLjkuNiA0LjItLjYuOC0xLjUgMS4yLTIuNCAxLjJ6Ii8+PHBhdGggZmlsbD0iIzIyQjZDNiIgZD0iTTc3IDExOEg0OWMtMi42IDAtNC43LTEuOS01LTQuNWwtMS05LjZjLS4zLTMuMi0yLTYuMS00LjUtOGg0OWMtMi42IDEuOS00LjIgNC44LTQuNSA4bC0xIDkuNmMtLjMgMi42LTIuNCA0LjUtNSA0LjV6Ii8+PHBhdGggZmlsbD0iIzFGQTFBOCIgZD0iTTQzLjcgMTEwbC40IDMuNWMuMyAyLjUgMi40IDQuNSA1IDQuNWgyOGMyLjYgMCA0LjctMS45IDUtNC41bC40LTMuNUg0My43eiIvPjxwYXRoIGZpbGw9IiM0NTRCNTQiIGQ9Ik03NyAxMjFINDljLTQuMSAwLTcuNS0zLjEtOC03LjJsLTEtOS42Yy0uMi0yLjMtMS41LTQuNS0zLjMtNS45LTEtLjgtMS41LTIuMS0xLTMuMy40LTEuMiAxLjYtMi4xIDIuOC0yLjFoNDljMS4zIDAgMi40LjggMi44IDIuMXMwIDIuNi0xIDMuM2MtMS45IDEuNC0zLjEgMy42LTMuMyA1LjlsLTEgOS42Yy0uNSA0LjEtMy45IDcuMi04IDcuMnpNNDQuNyA5OWMuNyAxLjUgMS4xIDMgMS4zIDQuN2wxIDkuNmMuMSAxIDEgMS44IDIgMS44aDI4YzEgMCAxLjktLjggMi0xLjhsMS05LjVjLjItMS42LjYtMy4yIDEuMy00LjdINDQuN3oiLz48cGF0aCBmaWxsPSIjNDU0QjU0IiBkPSJNODUgOTlINDFjLTcuMiAwLTEzLTUuOC0xMy0xM1Y0MmMwLTcuMiA1LjgtMTMgMTMtMTNoNDRjNy4yIDAgMTMgNS44IDEzIDEzdjQ0YzAgNy4yLTUuOCAxMy0xMyAxM3pNNDEgMzVjLTMuOSAwLTcgMy4xLTcgN3Y0NGMwIDMuOSAzLjEgNyA3IDdoNDRjMy45IDAgNy0zLjEgNy03VjQyYzAtMy45LTMuMS03LTctN0g0MXoiLz48L3N2Zz4=) 50% 50% no-repeat; }
-
-.overview-icon-whistle:before {
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48Y2lyY2xlIGZpbGw9IiNCM0UxRUEiIGN4PSI4MCIgY3k9IjY0IiByPSIzMCIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik05MC42IDUzLjRDODcuNyA1MC41IDgzLjggNDkgODAgNDlWMzRIMTR2MTJsMzcuMSAxMGMtMi44IDEwLjEtLjIgMjEuMyA3LjcgMjkuM0M2NC42IDkxLjEgNzIuMyA5NCA4MCA5NFY3OWMzLjggMCA3LjctMS41IDEwLjYtNC40IDUuOS01LjkgNS45LTE1LjMgMC0yMS4yeiIvPjxwYXRoIGZpbGw9IiM0NTRCNTQiIGQ9Ik04MCA5N2MtOC41IDAtMTYuOS0zLjItMjMuMy05LjYtMTEtMTEtMTIuOC0yOC41LTQuMi00MS41LjktMS40IDIuOC0xLjggNC4yLS45IDEuNC45IDEuOCAyLjguOSA0LjItNyAxMC42LTUuNiAyNC45IDMuNSAzMy45IDEwLjUgMTAuNSAyNy43IDEwLjUgMzguMiAwczEwLjUtMjcuNyAwLTM4LjJDOTQgMzkuOCA4Ny4yIDM3IDgwIDM3Yy0xLjcgMC0zLTEuMy0zLTNzMS4zLTMgMy0zYzguOCAwIDE3LjEgMy40IDIzLjMgOS43IDEyLjkgMTIuOSAxMi45IDMzLjggMCA0Ni43Qzk2LjkgOTMuOCA4OC41IDk3IDgwIDk3eiIvPjxwYXRoIGZpbGw9IiM0NTRCNTQiIGQ9Ik0xMTQgNjdoLTRjLTEuNyAwLTMtMS4zLTMtM3MxLjMtMyAzLTNoNGMxLjcgMCAzIDEuMyAzIDNzLTEuMyAzLTMgM3ptLTYyLjgtOC4zYy0uMyAwLS41IDAtLjgtLjFsLTM3LjItOS43Yy0xLjMtLjMtMi4yLTEuNS0yLjItMi45VjM0YzAtMS43IDEuMy0zIDMtM2g2NmMxLjcgMCAzIDEuMyAzIDNzLTEuMyAzLTMgM0gxN3Y2LjdsMzQuOSA5LjJjMS42LjQgMi42IDIuMSAyLjEgMy43LS4zIDEuMy0xLjUgMi4xLTIuOCAyLjF6Ii8+PC9zdmc+) 50% 50% no-repeat; }
-
-.features {
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background: #212121;
-  color: #fff; }
-  @media only screen and (min-width: 768px) {
-    .features {
-      padding-top: 80px;
-      padding-bottom: 80px; } }
-  .features .title {
-    color: #fff; }
-    .features .title:after {
-      background: #fff; }
-
-.features-inner {
-  color: #454545;
-  padding: 20px; }
-  @media only screen and (min-width: 768px) {
-    .features-inner {
-      padding: 20px 100px; } }
-
-.features-list {
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-  @media only screen and (min-width: 768px) {
-    .features-list {
-      display: flex;
-      flex-wrap: wrap; } }
-  @media only screen and (min-width: 980px) {
-    .features-list {
-      padding: 0 100px; } }
-
-.feature-item {
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-  padding: 16px 60px;
-  color: #ccc; }
-  @media only screen and (min-width: 768px) {
-    .feature-item {
-      width: 33.33334%;
-      padding-right: 40px; } }
-  @media only screen and (min-width: 980px) {
-    .feature-item {
-      padding-right: 40px; } }
-
-.feature-item-title {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 600;
-  color: #fff; }
-
-.feature-link {
-  color: #fff; }
-  .feature-link:hover, .feature-link:focus {
-    color: #fff; }
-
-.feature-icon:before {
-  content: '';
-  width: 80px;
-  height: 80px;
-  display: block;
-  padding-left: 100px;
-  margin: 20px auto; }
-
-.feature-icon-timer:before {
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48Y2lyY2xlIGZpbGw9InRyYW5zcGFyZW50IiBjeD0iNjQiIGN5PSI3MCIgcj0iNDAiLz48cGF0aCBmaWxsPSJ0cmFuc3BhcmVudCIgZD0iTTc0IDIxSDU2Yy0xLjEgMC0yLS45LTItMnYtOGgyMHYxMHoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNNjggMTFoNnYxMGgtNnptLTQgMTAyYy0xMS41IDAtMjIuMy00LjUtMzAuNC0xMi42QzI1LjUgOTIuMyAyMSA4MS41IDIxIDcwczQuNS0yMi4zIDEyLjYtMzAuNEM0MS43IDMxLjUgNTIuNSAyNyA2NCAyN3MyMi4zIDQuNSAzMC40IDEyLjZDMTAyLjUgNDcuNyAxMDcgNTguNSAxMDcgNzBzLTQuNSAyMi4zLTEyLjYgMzAuNEM4Ni4zIDEwOC41IDc1LjUgMTEzIDY0IDExM3ptMC04MGMtOS45IDAtMTkuMiAzLjgtMjYuMiAxMC44LTE0LjQgMTQuNC0xNC40IDM3LjkgMCA1Mi4zIDcgNyAxNi4zIDEwLjggMjYuMiAxMC44czE5LjItMy44IDI2LjItMTAuOGMxNC40LTE0LjQgMTQuNC0zNy45IDAtNTIuMy03LTctMTYuMy0xMC44LTI2LjItMTAuOHoiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNNjQgMzNjLTEuNyAwLTMtMS4zLTMtM3YtOWMwLTEuNyAxLjMtMyAzLTNoN3YtNEg1N3YyYzAgMS43LTEuMyAzLTMgM3MtMy0xLjMtMy0zdi01YzAtMS43IDEuMy0zIDMtM2gyMGMxLjcgMCAzIDEuMyAzIDN2MTBjMCAxLjctMS4zIDMtMyAzaC03djZjMCAxLjctMS4zIDMtMyAzeiIvPjxwYXRoIGZpbGw9IiNGMzc5N0IiIGQ9Ik05NCA3MGMwLTE1LjQtMTEuNy0yOC4xLTI2LjctMjkuOC0xLjgtLjItMy4zIDEuMi0zLjMgM1Y3MGwxOSAxOWMxLjMgMS4zIDMuNCAxLjEgNC41LS4yQzkxLjggODMuMyA5NCA3Ni42IDk0IDcweiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik01OS42IDEwMC4zaC0uNWMtMS42LS4yLTIuOC0xLjctMi42LTMuMy4yLTEuNiAxLjctMi44IDMuMy0yLjZoLjFjMS42LjIgMi44IDEuNyAyLjYgMy40LS4yIDEuNC0xLjQgMi41LTIuOSAyLjV6bTExLjgtMS4xYy0xLjMgMC0yLjQtLjgtMi45LTItLjUtMS42LjMtMy4zIDEuOS0zLjhsLjItLjFjMS42LS41IDMuMy40IDMuOCAxLjkuNSAxLjYtLjQgMy4zLTEuOSAzLjhsLS45LTIuOS45IDIuOWMtLjQuMS0uNy4yLTEuMS4yem0tMjMuMS0zYy0uNSAwLTEuMS0uMi0xLjYtLjUtMS40LS45LTEuOC0yLjgtLjktNC4xLjktMS40IDIuNy0xLjggNC4xLTFsLjEuMWMxLjQuOSAxLjggMi44LjkgNC4xLS43LjktMS42IDEuNC0yLjYgMS40em0tOC41LTguNWMtMSAwLTItLjUtMi42LTEuNGwyLjUtMS42LTIuNiAxLjVjLS45LTEuNC0uNS0zLjMuOS00LjEgMS40LS45IDMuMi0uNSA0LjEuOWwuMS4xYy45IDEuNC40IDMuMy0xIDQuMS0uMy40LS44LjUtMS40LjV6bS00LTExLjNjLTEuNSAwLTIuOC0xLjEtMy0yLjZ2LS4xYy0uMi0xLjYuOS0zLjIgMi42LTMuNCAxLjYtLjIgMy4yLjkgMy40IDIuNnYuMWMuMiAxLjYtMSAzLjEtMi42IDMuMy0uMi4xLS4zLjEtLjQuMXpNMzcgNjQuNWMtLjMgMC0uNi0uMS0xLS4yLTEuNi0uNS0yLjQtMi4yLTEuOS0zLjhsMi44IDEtMi44LTFjLjUtMS42IDIuMi0yLjQgMy44LTEuOSAxLjYuNSAyLjQgMi4yIDEuOSAzLjh2LjFjLS40IDEuMi0xLjUgMi0yLjggMnptNi4yLTEwLjNjLS43IDAtMS41LS4zLTIuMS0uOC0xLjItMS4xLTEuMi0zLS4xLTQuMmwyLjIgMi4xLTIuMS0yLjNjMS4xLTEuMiAzLTEuMyA0LjItLjEgMS4yIDEuMSAxLjMgMyAuMSA0LjJsLS4xLjFjLS41LjctMS4zIDEtMi4xIDF6bTEwLTYuN2MtMS4yIDAtMi40LS43LTIuOC0xLjktLjYtMS42LjItMy4zIDEuOC0zLjlsMS4xIDIuOC0xLTIuOGMxLjUtLjYgMy4zLjIgMy45IDEuNy42IDEuNS0uMSAzLjMtMS43IDMuOSAwIDAtLjEgMC0uMS4xLS41LjEtLjkuMS0xLjIuMXoiLz48L3N2Zz4=) 50% 50% no-repeat; }
-
-.feature-icon-rings:before {
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjRkZGIiBkPSJNNTAgMTIxYy0xOC4yIDAtMzMtMTQuOC0zMy0zM3MxNC44LTMzIDMzLTMzIDMzIDE0LjggMzMgMzMtMTQuOCAzMy0zMyAzM3ptMC02MGMtMTQuOSAwLTI3IDEyLjEtMjcgMjdzMTIuMSAyNyAyNyAyNyAyNy0xMi4xIDI3LTI3LTEyLjEtMjctMjctMjd6Ii8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTYwLjcgMTA4LjFjLS44IDAtMS41LS4zLTIuMS0uOS01LjgtNS44LTkuMS0xMy41LTkuMS0yMS43IDAtNi43IDIuMS0xMy4xIDYuMi0xOC40IDEtMS4zIDIuOS0xLjYgNC4yLS42IDEuMyAxIDEuNiAyLjkuNiA0LjItMy4zIDQuMy01IDkuNC01IDE0LjggMCA2LjYgMi42IDEyLjggNy4zIDE3LjQgMS4yIDEuMiAxLjIgMy4xIDAgNC4yLS42LjctMS4zIDEtMi4xIDF6TTgwIDExNmMtMS43IDAtMy0xLjMtMy0zczEuMy0zIDMtM2MxMy41IDAgMjQuNS0xMSAyNC41LTI0LjVTOTMuNSA2MSA4MCA2MWMtMS43IDAtMy0xLjMtMy0zczEuMy0zIDMtM2MxNi44IDAgMzAuNSAxMy43IDMwLjUgMzAuNVM5Ni44IDExNiA4MCAxMTZ6TTQ1IDQxaDEwdjIwSDQ1eiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik03NSA0M2gxMHYxOEg3NXoiLz48cGF0aCBmaWxsPSIjNzc3IiBkPSJNNTAgNDRjLTEuNyAwLTMtMS4zLTMtM1Y5YzAtMS43IDEuMy0zIDMtM3MzIDEuMyAzIDN2MzJjMCAxLjctMS4zIDMtMyAzem0zMCAyYy0xLjcgMC0zLTEuMy0zLTNWOWMwLTEuNyAxLjMtMyAzLTNzMyAxLjMgMyAzdjM0YzAgMS43LTEuMyAzLTMgM3oiLz48cGF0aCBmaWxsPSIjNzc3IiBkPSJNNTUgNjRINDVjLTEuNyAwLTMtMS4zLTMtM1Y0MWMwLTEuNyAxLjMtMyAzLTNoMTBjMS43IDAgMyAxLjMgMyAzdjIwYzAgMS43LTEuMyAzLTMgM3ptLTctNmg0VjQ0aC00djE0em0zNyA2SDc1Yy0xLjcgMC0zLTEuMy0zLTNWNDNjMC0xLjcgMS4zLTMgMy0zaDEwYzEuNyAwIDMgMS4zIDMgM3YxOGMwIDEuNy0xLjMgMy0zIDN6bS03LTZoNFY0NmgtNHYxMnoiLz48L3N2Zz4=) 50% 50% no-repeat; }
-
-.feature-icon-speaker:before {
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjRjNDRUQ0IiBkPSJNNTEuMyA4MS40SDMzLjljLTkuNiAwLTE3LjQtNy44LTE3LjQtMTcuNCAwLTkuNiA3LjgtMTcuNCAxNy40LTE3LjRoMTcuNHYzNC44eiIvPjxwYXRoIGZpbGw9IiNFOTc1ODMiIGQ9Ik0xNi41IDY0YzAgOS42IDcuOCAxNy40IDE3LjQgMTcuNGgxNy40di04LjdIMzMuOWMtOC4xIDAtMTQuOS01LjUtMTYuOC0xMy0uNCAxLjMtLjYgMi44LS42IDQuM3oiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNNzkuMSAxMDIuM0w1MS4zIDgxLjRWNDYuNmwyNy44LTIwLjljMi45LTIuMSA3LS4xIDcgMy41djY5LjZjMCAzLjYtNC4xIDUuNi03IDMuNXoiLz48cGF0aCBmaWxsPSIjQzdEN0UyIiBkPSJNNzkuMSA5My42TDUxLjMgNzIuN3Y4LjdsMjcuOCAyMC45YzIuOSAyLjEgNyAuMSA3LTMuNXYtOC43YzAgMy42LTQuMSA1LjYtNyAzLjV6Ii8+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTgxLjcgMTA2LjFjLTEuNiAwLTMuMS0uNS00LjQtMS41TDQ5LjUgODMuOGMtLjgtLjYtMS4yLTEuNS0xLjItMi40VjQ2LjZjMC0xLjcgMS4zLTMgMy0zczMgMS4zIDMgM3YzMy4zbDI2LjYgMjBjLjYuNCAxLjEuMyAxLjQuMS4zLS4xLjctLjUuNy0xLjJWMjkuMmMwLS43LS41LTEuMS0uNy0xLjItLjMtLjEtLjgtLjMtMS40LjFMNjMuNyA0MWMtMS4zIDEtMy4yLjctNC4yLS42LTEtMS4zLS43LTMuMi42LTQuMmwxNy4yLTEyLjljMi4yLTEuNyA1LjItMS45IDcuNy0uNyAyLjUgMS4zIDQuMSAzLjggNC4xIDYuNnY2OS42YzAgMi44LTEuNiA1LjMtNC4xIDYuNi0xIC41LTIuMi43LTMuMy43eiIvPjxwYXRoIGZpbGw9IiMzMzMiIGQ9Ik01MS4zIDg0LjRIMzMuOWMtMTEuMiAwLTIwLjQtOS4xLTIwLjQtMjAuNHM5LjEtMjAuNCAyMC40LTIwLjRoMTcuNGMxLjcgMCAzIDEuMyAzIDN2MzQuOGMwIDEuNi0xLjQgMy0zIDN6TTMzLjkgNDkuNmMtNy45IDAtMTQuNCA2LjUtMTQuNCAxNC40UzI2IDc4LjQgMzMuOSA3OC40aDE0LjRWNDkuNkgzMy45eiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xMTYuNSA2N0g5OS4xYy0xLjcgMC0zLTEuMy0zLTNzMS4zLTMgMy0zaDE3LjRjMS43IDAgMyAxLjMgMyAzcy0xLjMgMy0zIDN6TTk5LjEgNDkuNmMtMSAwLTEuOS0uNS0yLjUtMS4zLS45LTEuNC0uNS0zLjIuOC00LjJsMTMtOC43YzEuNC0uOSAzLjItLjUgNC4yLjguOSAxLjQuNSAzLjItLjggNC4ybC0xMyA4LjdjLS41LjMtMS4xLjUtMS43LjV6bTEzIDQzLjVjLS42IDAtMS4xLS4yLTEuNy0uNWwtMTMtOC43Yy0xLjQtLjktMS44LTIuOC0uOC00LjIuOS0xLjQgMi44LTEuOCA0LjItLjhsMTMgOC43YzEuNC45IDEuOCAyLjguOCA0LjItLjUuOC0xLjUgMS4zLTIuNSAxLjN6Ii8+PC9zdmc+) 50% 50% no-repeat; }
-
-.feature-icon-shoe:before {
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSJ0cmFuc3BhcmVudCIgZD0iTTQ2LjkgNTAuNWw0LjYtOC42IDE2LjggMTAuNyIvPjxwYXRoIGZpbGw9IiNFRUUiIGQ9Ik00Ni45IDUzLjVjLS41IDAtMS0uMS0xLjQtLjQtMS41LS44LTItMi42LTEuMi00LjFsNC42LTguNWMuNC0uNyAxLjEtMS4zIDEuOS0xLjUuOC0uMiAxLjctLjEgMi40LjRsOS4xIDUuOWMxLjQuOSAxLjggMi44LjkgNC4xLS45IDEuNC0yLjggMS44LTQuMS45bC02LjMtNC4xLTMuMSA1LjdjLS43IDEtMS43IDEuNi0yLjggMS42eiIvPjxwYXRoIGZpbGw9InRyYW5zcGFyZW50IiBkPSJNMTQuNyA0My44bC01IDIzLjFjLTEgNC40LjggOSA0LjUgMTEuNmwxMDEuMiA1LjNoMS4xYzQuOC0uNiA3LjEtNi4xIDQuMy0xMGwtLjEtLjFjLS44LTEuMS0xLjktMS45LTMuMi0yLjNsLTI2LjgtNi45LTI2LjQtMTMuOWMtNS40LTIuOS0xMS45LTIuOS0xNy40LS4xbC0xMC4xIDUuMmMtNS4zIDIuNy0xMS44LjctMTQuNi00LjZsLS4xLS4yYy0xLjYtMy4xLTQuMi01LjYtNy40LTcuMXoiLz48cGF0aCBmaWxsPSIjRjM3OTdCIiBkPSJNMzguOSA2MWMtLjQgMS4yLS45IDIuMS0xLjEgMy0uOCAzLjMgMS4xIDUuNSA0LjUgNSAzLjMtLjUgNi42LTEuMyA5LjgtMi4xIDYuOC0xLjUgMTMuNi0zLjEgMjAuNS00LjcuMiAwIC4zLS4xLjYuMS0uMy4xLS42LjMtLjkuNC05LjcgMy43LTE5LjQgNy41LTI5LjEgMTEuMi0xLjkuNy0zLjggMS4zLTUuOCAxLTMuMy0uMy00LjktMi43LTQtNS45LjctMi41IDIuMi00LjQgMy45LTYuMy41LS41IDEtMSAxLjYtMS43eiIvPjxwYXRoIGZpbGw9IiNFRUUiIGQ9Ik0yNi4xIDgyLjFoLS4ybC0xMi0uNmMtLjYgMC0xLjEtLjItMS42LS42LTQuNi0zLjMtNi45LTkuMS01LjYtMTQuN2w1LTIzLjFjLjItLjkuOC0xLjYgMS42LTIgLjgtLjQgMS44LS40IDIuNiAwIDMuOCAxLjggNi45IDQuNyA4LjggOC40bC4xLjJjMiAzLjggNi43IDUuMyAxMC42IDMuM2wxMC4xLTUuMmM2LjMtMy4zIDEzLjktMy4yIDIwLjIuMWwyNi4yIDEzLjggMjkuOCA5LjJhMy4wMzcgMy4wMzcgMCAwIDEtMS44IDUuOGwtMzAuMS05LjNjLS4yLS4xLS4zLS4xLS41LS4ybC0yNi40LTE0Yy00LjYtMi40LTEwLTIuNC0xNC42LS4xbC0xMC4xIDUuMmMtNi43IDMuNS0xNS4xLjgtMTguNi01LjlsLS4xLS4yYy0uNy0xLjQtMS43LTIuNi0yLjgtMy42bC00LjEgMTguOWMtLjYgMyAuNCA2IDIuNiA4bDExIC42YzEuNy4xIDIuOSAxLjUgMi44IDMuMS4xIDEuNy0xLjMgMi45LTIuOSAyLjl6Ii8+PHBhdGggZmlsbD0iI0VFRSIgZD0iTTkwLjcgNjcuNWMtLjUgMC0xLS4xLTEuNC0uM2wtMjYuNC0xNGMtNC42LTIuNC0xMC0yLjQtMTQuNi0uMWwtMTAuMSA1LjJjLTYuNyAzLjUtMTUuMS44LTE4LjYtNS45bC0uMS0uMmMtLjgtMS41LS4yLTMuMyAxLjMtNC4xIDEuNS0uOCAzLjMtLjIgNC4xIDEuM2wuMS4yYzIgMy44IDYuNyA1LjMgMTAuNiAzLjNsMTAuMS01LjJjNi4zLTMuMyAxMy45LTMuMiAyMC4yLjFsMjYuNCAxMy45YzEuNS44IDIgMi42IDEuMyA0LjEtLjcgMS4xLTEuOCAxLjctMi45IDEuN3ptMjMgMjMuNUg5LjhjLTEgMC0yLS41LTIuNS0xLjQtLjYtLjktLjYtMS45LS4yLTIuOWw0LjMtOS41Yy43LTEuNSAyLjUtMi4yIDQtMS41IDEuNS43IDIuMiAyLjUgMS41IDRMMTQuNSA4NWg5OC43YzIuNS4xIDQuMS0uNCA1LjEtMS41IDEuMy0xLjMgMS45LTMuOSAxLjgtNy41LS4xLTEuNyAxLjItMyAyLjktMy4xIDEuNy0uMSAzIDEuMiAzLjEgMi45LjIgNS4zLTEgOS4zLTMuNSAxMS45LTIuMiAyLjItNS4yIDMuMy04LjkgMy4zeiIvPjxwYXRoIGZpbGw9IiNGMzc5N0IiIGQ9Ik01OC4yIDU1LjdjLS40IDAtLjktLjEtMS4zLS4zLTEuNS0uNy0yLjEtMi41LTEuNC00bDMuNC02LjhjLjctMS41IDIuNS0yLjEgNC0xLjQgMS41LjcgMi4xIDIuNSAxLjQgNEw2MC45IDU0Yy0uNSAxLjEtMS42IDEuNy0yLjcgMS43em0xMC43IDQuNGMtLjUgMC0xLS4xLTEuNS0uNC0xLjQtLjgtMS45LTIuNi0xLjEtNC4xbDMuMy01LjhjLjgtMS40IDIuNi0xLjkgNC4xLTEuMSAxLjQuOCAxLjkgMi42IDEuMSA0LjFsLTMuMyA1LjhjLS42LjktMS42IDEuNS0yLjYgMS41em0xMCA1LjJjLS41IDAtMS0uMS0xLjUtLjQtMS40LS44LTEuOS0yLjYtMS4xLTQuMWwzLjMtNS44Yy44LTEuNCAyLjYtMS45IDQuMS0xLjEgMS40LjggMS45IDIuNiAxLjEgNC4xbC0zLjMgNS44Yy0uNiAxLTEuNiAxLjUtMi42IDEuNXoiLz48L3N2Zz4=) 50% 50% no-repeat; }
-
-.feature-icon-headphones:before {
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjRkZGIiBkPSJNNzkuNiA4OWMtMy41IDAtNi4zLTIuOC02LjMtNi4yVjM1LjJjMC0zLjUgMi44LTYuMiA2LjItNi4yIDMuNSAwIDYuMiAyLjggNi4yIDYuMnY0Ny41Yy4yIDMuNS0yLjYgNi4zLTYuMSA2LjN6Ii8+PHBhdGggZmlsbD0iI0M3RDdFMiIgZD0iTTc5LjYgMjljLTMuNSAwLTYuMiAyLjgtNi4yIDYuM3YyMS4xYzMuNSAzLjIgNy44IDUuNSAxMi41IDYuN1YzNS4yYzAtMy40LTIuOC02LjItNi4zLTYuMnoiLz48cGF0aCBmaWxsPSIjMzMzIiBkPSJNNzkuNiA5MmMtNS4xIDAtOS4yLTQuMS05LjItOS4yVjM1LjJjMC01LjEgNC4xLTkuMiA5LjItOS4yczkuMiA0LjEgOS4yIDkuMnY0Ny41Yy4xIDUuMi00LjEgOS4zLTkuMiA5LjN6bTAtNjBjLTEuOCAwLTMuMiAxLjUtMy4yIDMuMnY0Ny41YzAgMS44IDEuNSAzLjIgMy4yIDMuMnMzLjItMS41IDMuMi0zLjJWMzUuMmMuMS0xLjctMS40LTMuMi0zLjItMy4yeiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik05OC40IDU0aC01Yy0xMSAwLTIwLTktMjAtMjBzOS0yMCAyMC0yMGg1djQweiIvPjxwYXRoIGZpbGw9IiMzMzMiIGQ9Ik05OC40IDU3aC01Yy0xMi43IDAtMjMtMTAuMy0yMy0yM3MxMC4zLTIzIDIzLTIzaDVjMS43IDAgMyAxLjMgMyAzdjQwYzAgMS43LTEuNCAzLTMgM3ptLTUtNDBjLTkuNCAwLTE3IDcuNi0xNyAxN3M3LjYgMTcgMTcgMTdoMlYxN2gtMnoiLz48cGF0aCBmaWxsPSIjQzdEN0UyIiBkPSJNOTguNCA1OWMtMy41IDAtNi4yLTIuOC02LjItNi4yVjE1LjJjMC0zLjUgMi44LTYuMiA2LjItNi4yIDMuNSAwIDYuMiAyLjggNi4yIDYuMnYzNy41YzAgMy41LTIuOCA2LjMtNi4yIDYuM3oiLz48cGF0aCBmaWxsPSIjMzMzIiBkPSJNOTguNCA2MmMtNS4xIDAtOS4yLTQuMS05LjItOS4yVjE1LjJjMC01LjEgNC4xLTkuMiA5LjItOS4yczkuMiA0LjEgOS4yIDkuMnYzNy41YzAgNS4yLTQuMSA5LjMtOS4yIDkuM3ptMC01MGMtMS44IDAtMy4yIDEuNS0zLjIgMy4ydjM3LjVjMCAxLjggMS41IDMuMiAzLjIgMy4yczMuMi0xLjUgMy4yLTMuMlYxNS4yYzAtMS43LTEuNC0zLjItMy4yLTMuMnpNNzkuNiAxMjJjLTEuNyAwLTMtMS4zLTMtM1Y4OWMwLTEuNyAxLjMtMyAzLTNzMyAxLjMgMyAzdjMwYzAgMS43LTEuMyAzLTMgM3oiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNNDguNCA5OWMzLjUgMCA2LjMtMi44IDYuMy02LjJWNDUuMmMwLTMuNS0yLjgtNi4yLTYuMi02LjItMy41IDAtNi4yIDIuOC02LjIgNi4ydjQ3LjVjLS4yIDMuNSAyLjYgNi4zIDYuMSA2LjN6Ii8+PHBhdGggZmlsbD0iI0M3RDdFMiIgZD0iTTQ4LjQgMzljMy41IDAgNi4yIDIuOCA2LjIgNi4ydjIxLjFjLTMuNSAzLjItNy44IDUuNS0xMi41IDYuN1Y0NS4yYzAtMy40IDIuOC02LjIgNi4zLTYuMnoiLz48cGF0aCBmaWxsPSIjMzMzIiBkPSJNNDguNCAxMDJjLTUuMSAwLTkuMi00LjEtOS4yLTkuMlY0NS4yYzAtNS4xIDQuMS05LjIgOS4yLTkuMnM5LjIgNC4xIDkuMiA5LjJ2NDcuNWMwIDUuMi00LjEgOS4zLTkuMiA5LjN6bTAtNjBjLTEuOCAwLTMuMiAxLjUtMy4yIDMuMnY0Ny41YzAgMS44IDEuNSAzLjIgMy4yIDMuMnMzLjItMS41IDMuMi0zLjJWNDUuMmMwLTEuNy0xLjQtMy4yLTMuMi0zLjJ6Ii8+PHBhdGggZmlsbD0iI0ZGRiIgZD0iTTI5LjYgNjRoNWMxMSAwIDIwLTkgMjAtMjBzLTktMjAtMjAtMjBoLTV2NDB6Ii8+PHBhdGggZmlsbD0iIzMzMyIgZD0iTTM0LjYgNjdoLTVjLTEuNyAwLTMtMS4zLTMtM1YyNGMwLTEuNyAxLjMtMyAzLTNoNWMxMi43IDAgMjMgMTAuMyAyMyAyM3MtMTAuMyAyMy0yMyAyM3ptLTItNmgyYzkuNCAwIDE3LTcuNiAxNy0xN3MtNy42LTE3LTE3LTE3aC0ydjM0eiIvPjxwYXRoIGZpbGw9IiNDN0Q3RTIiIGQ9Ik0yOS42IDY5YzMuNSAwIDYuMy0yLjggNi4zLTYuMlYyNS4yYzAtMy41LTIuOC02LjItNi4yLTYuMi0zLjUgMC02LjIgMi44LTYuMiA2LjJ2MzcuNWMtLjEgMy41IDIuNyA2LjMgNi4xIDYuM3oiLz48cGF0aCBmaWxsPSIjMzMzIiBkPSJNMjkuNiA3MmMtNS4xIDAtOS4yLTQuMS05LjItOS4yVjI1LjJjMC01LjEgNC4xLTkuMiA5LjItOS4yczkuMiA0LjEgOS4yIDkuMnYzNy41Yy4xIDUuMi00LjEgOS4zLTkuMiA5LjN6bTAtNTBjLTEuOCAwLTMuMiAxLjUtMy4yIDMuMnYzNy41YzAgMS44IDEuNSAzLjIgMy4yIDMuMnMzLjItMS41IDMuMi0zLjJWMjUuMmMuMS0xLjctMS40LTMuMi0zLjItMy4yem0xOC44IDEwMGMtMS43IDAtMy0xLjMtMy0zVjk5YzAtMS43IDEuMy0zIDMtM3MzIDEuMyAzIDN2MjBjMCAxLjctMS40IDMtMyAzeiIvPjwvc3ZnPg==) 50% 50% no-repeat; }
-
-.feature-icon-laptop:before {
-  background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSJ0cmFuc3BhcmVudCIgZD0iTTEyNCA5OS41SDR2LTZoNDlsMSAxaDIwbDEtMWg0OXoiLz48cGF0aCBvcGFjaXR5PSIuMyIgZmlsbD0iI0FBQSIgZD0iTTQgOTMuNWg2djZINHoiLz48cGF0aCBmaWxsPSJ0cmFuc3BhcmVudCIgZD0iTTExIDIzLjVoMTA2djcwSDExeiIvPjxwYXRoIG9wYWNpdHk9Ii4zIiBmaWxsPSJ0cmFuc3BhcmVudCIgZD0iTTExNyAyNC41di0xSDExdjcwaDJsMy02NXoiLz48cGF0aCBmaWxsPSIjQUFBIiBkPSJNMTYgMjguNWg5NnY2MEgxNnoiLz48ZyBmaWxsPSIjMzMzIj48cGF0aCBkPSJNMTI0IDkyaC01LjVWMjMuNWMwLS44LS43LTEuNS0xLjUtMS41SDExYy0uOCAwLTEuNS43LTEuNSAxLjVWOTJINGMtLjggMC0xLjUuNy0xLjUgMS41djZjMCAuOC43IDEuNSAxLjUgMS41aDEyMGMuOCAwIDEuNS0uNyAxLjUtMS41di02YzAtLjgtLjctMS41LTEuNS0xLjV6TTEyLjUgMjVoMTAzdjY3SDc1Yy0uNCAwLS44LjItMS4xLjRsLS41LjZINTQuNmwtLjYtLjZjLS4yLS4yLS42LS40LTEtLjRIMTIuNVYyNXptMTEwIDczSDUuNXYtM2g0Ni45bC42LjZjLjMuMy43LjQgMS4xLjRoMjBjLjQgMCAuOC0uMiAxLjEtLjRsLjYtLjZoNDYuOXYzeiIvPjxwYXRoIGQ9Ik0xMTMuNSA4OC41di02MGMwLS44LS43LTEuNS0xLjUtMS41SDE2Yy0uOCAwLTEuNS43LTEuNSAxLjV2NjBjMCAuOC43IDEuNSAxLjUgMS41aDk2Yy44IDAgMS41LS43IDEuNS0xLjV6bS0zLTEuNWgtOTNWMzBoOTN2NTd6Ii8+PC9nPjwvc3ZnPg==) 50% 50% no-repeat;
-  position: relative;
-  transform: translate(0, 10px); }
-
-.action-block {
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background: #ff473a;
-  color: #fff; }
-  @media only screen and (min-width: 768px) {
-    .action-block {
-      padding-top: 80px;
-      padding-bottom: 60px; } }
-  .action-block .title {
-    color: #fff; }
-    .action-block .title:after {
-      background: #fff; }
-
-.action-block-inner {
-  padding: 20px; }
-  @media only screen and (min-width: 768px) {
-    .action-block-inner {
-      padding: 20px 100px; } }
-  @media only screen and (min-width: 980px) {
-    .action-block-inner {
-      padding: 20px 100px; } }
-
-.action-button {
-  background: #212121;
-  color: #fff;
-  border-radius: 30px;
-  border: 0;
-  padding: 20px 60px;
-  display: inline-block;
-  -webkit-appearance: none; }
-  .action-button:hover, .action-button:focus {
-    background: #fff;
-    color: #212121;
-    text-decoration: none; }
-
-.footer {
-  font-size: 13px;
-  line-height: 18px;
-  padding-top: 40px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-  background: #212121;
-  color: #f1f1f1; }
-
-/*# sourceMappingURL=styles.css.map*/</style></head><body><div class="banner"><div class="container-m container-l container-xl"><div class="banner-inner"><div class="header"><a class="logo" href="/">Gymphy</a><nav class="menu"><a class="menu-item" href="#overview">Overview</a> <a class="menu-item" href="#features">Features</a> <a class="menu-item" href="https://gymphy.co/signup">Sign up</a></nav></div><div class="flex-m"><div class="banner-content"><h1 class="banner-title">A new way to create shareable workouts</h1><div class="banner-content-inner"><p>Create custom exercise plans that you can share with your friends, family or students.</p><p><a class="banner-button button" href="https://gymphy.co">Launch App</a></p></div></div><div class="phone"><div class="video"><button class="banner-play" id="play"><span class="sr">Play</span></button><video id="demo" class="banner-video" loop><source src="video/gymphy-demo.mp4"></video></div></div></div></div></div></div><div id="overview" class="overview"><div class="container"><h2 class="fs-3 title">Overview</h2><div class="overview-inner"><p>A powerful web application built to work on mobile, tablet and desktop devices.</p></div><ul class="overview-list"><li class="overview-item overview-icon overview-icon-top"><h3 class="overview-item-title">Sign up</h3><p class="overview-item-content">Whether you're a personal trainer or a fitness junkie, joining is easy.</p></li><li class="overview-item overview-icon overview-icon-strength"><h3 class="overview-item-title">Create exercise plans</h3><p class="overview-item-content">Give it a name, add rounds with sets, add custom exercises and breaks.</p></li><li class="overview-item overview-icon overview-icon-whistle"><h3 class="overview-item-title">Get active</h3><p class="overview-item-content">Once you have created your workout, get moving and smash through it.</p></li><li class="overview-item overview-icon overview-icon-watch"><h3 class="overview-item-title">Share workouts</h3><p class="overview-item-content">Send workout plans to friends, family or students or publish them online.</p></li></ul></div></div><div id="features" class="features"><div class="container"><h2 class="fs-3 title">Features</h2><p>All the good things packed in one small application</p><ul class="features-list"><li class="feature-item feature-icon feature-icon-timer"><h3 class="feature-item-title">Smart timer</h3><p class="feature-item-content">A timer that will notify you so you don't need to keep checking the time.</p></li><li class="feature-item feature-icon feature-icon-rings"><h3 class="feature-item-title">Discover profiles</h3><p class="feature-item-content">View other profiles and there workout plans for inspiration.</p></li><li class="feature-item feature-icon feature-icon-speaker"><h3 class="feature-item-title">Workout assistant</h3><p class="feature-item-content">Focus more on your workout and let the assistant speak out.</p></li><li class="feature-item feature-icon feature-icon-shoe"><h3 class="feature-item-title">Public workouts</h3><p class="feature-item-content">All workouts are public and can be played anonymously.</p></li><li class="feature-item feature-icon feature-icon-headphones"><h3 class="feature-item-title">No distractions</h3><p class="feature-item-content">Listen to your favourite music while performing the exercises.</p></li><li class="feature-item feature-icon feature-icon-laptop"><h3 class="feature-item-title">Universal platform</h3><p class="feature-item-content">No app required. Just visit <a class="feature-link" href="https://gymphy.co">gymphy.co</a> on a mobile, tablet or desktop device.</p></li></ul></div></div><div class="action-block"><div class="container"><h2 class="fs-3 title-secondary">Ready to get started?</h2><div class="action-block-inner"><a class="action-button button" href="https://gymphy.co/signup">Sign up for free</a></div></div></div><div class="footer"><div class="container"><p class="no-margin">Copyright 2019 Gymphy. All Rights Reserved.</p></div></div><script type="text/javascript">!function(t,n){if("object"==typeof exports&&"object"==typeof module)module.exports=n();else if("function"==typeof define&&define.amd)define([],n);else{var e=n();for(var i in e)("object"==typeof exports?exports:t)[i]=e[i]}}(window,function(){return function(t){var n={};function e(i){if(n[i])return n[i].exports;var o=n[i]={i:i,l:!1,exports:{}};return t[i].call(o.exports,o,o.exports,e),o.l=!0,o.exports}return e.m=t,e.c=n,e.d=function(t,n,i){e.o(t,n)||Object.defineProperty(t,n,{enumerable:!0,get:i})},e.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},e.t=function(t,n){if(1&n&&(t=e(t)),8&n)return t;if(4&n&&"object"==typeof t&&t&&t.__esModule)return t;var i=Object.create(null);if(e.r(i),Object.defineProperty(i,"default",{enumerable:!0,value:t}),2&n&&"string"!=typeof t)for(var o in t)e.d(i,o,function(n){return t[n]}.bind(null,o));return i},e.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(n,"a",n),n},e.o=function(t,n){return Object.prototype.hasOwnProperty.call(t,n)},e.p="",e(e.s=1)}([function(t,n,e){var i;!function(){function o(t,n,e){return t.call.apply(t.bind,arguments)}function a(t,n,e){if(!t)throw Error();if(2<arguments.length){var i=Array.prototype.slice.call(arguments,2);return function(){var e=Array.prototype.slice.call(arguments);return Array.prototype.unshift.apply(e,i),t.apply(n,e)}}return function(){return t.apply(n,arguments)}}function s(t,n,e){return(s=Function.prototype.bind&&-1!=Function.prototype.bind.toString().indexOf("native code")?o:a).apply(null,arguments)}var r=Date.now||function(){return+new Date};function c(t,n){this.a=t,this.o=n||t,this.c=this.o.document}var f=!!window.FontFace;function l(t,n,e,i){if(n=t.c.createElement(n),e)for(var o in e)e.hasOwnProperty(o)&&("style"==o?n.style.cssText=e[o]:n.setAttribute(o,e[o]));return i&&n.appendChild(t.c.createTextNode(i)),n}function h(t,n,e){(t=t.c.getElementsByTagName(n)[0])||(t=document.documentElement),t.insertBefore(e,t.lastChild)}function u(t){t.parentNode&&t.parentNode.removeChild(t)}function p(t,n,e){n=n||[],e=e||[];for(var i=t.className.split(/\s+/),o=0;o<n.length;o+=1){for(var a=!1,s=0;s<i.length;s+=1)if(n[o]===i[s]){a=!0;break}a||i.push(n[o])}for(n=[],o=0;o<i.length;o+=1){for(a=!1,s=0;s<e.length;s+=1)if(i[o]===e[s]){a=!0;break}a||n.push(i[o])}t.className=n.join(" ").replace(/\s+/g," ").replace(/^\s+|\s+$/,"")}function d(t,n){for(var e=t.className.split(/\s+/),i=0,o=e.length;i<o;i++)if(e[i]==n)return!0;return!1}function g(t,n,e){function i(){s&&o&&(s(a),s=null)}n=l(t,"link",{rel:"stylesheet",href:n,media:"all"});var o=!1,a=null,s=e||null;f?(n.onload=function(){o=!0,i()},n.onerror=function(){o=!0,a=Error("Stylesheet failed to load"),i()}):setTimeout(function(){o=!0,i()},0),h(t,"head",n)}function v(t,n,e,i){var o=t.c.getElementsByTagName("head")[0];if(o){var a=l(t,"script",{src:n}),s=!1;return a.onload=a.onreadystatechange=function(){s||this.readyState&&"loaded"!=this.readyState&&"complete"!=this.readyState||(s=!0,e&&e(null),a.onload=a.onreadystatechange=null,"HEAD"==a.parentNode.tagName&&o.removeChild(a))},o.appendChild(a),setTimeout(function(){s||(s=!0,e&&e(Error("Script load timeout")))},i||5e3),a}return null}function m(){this.a=0,this.c=null}function y(t){return t.a++,function(){t.a--,b(t)}}function w(t,n){t.c=n,b(t)}function b(t){0==t.a&&t.c&&(t.c(),t.c=null)}function x(t){this.a=t||"-"}function j(t,n){this.c=t,this.f=4,this.a="n";var e=(n||"n4").match(/^([nio])([1-9])$/i);e&&(this.a=e[1],this.f=parseInt(e[2],10))}function _(t){var n=[];t=t.split(/,\s*/);for(var e=0;e<t.length;e++){var i=t[e].replace(/['"]/g,"");-1!=i.indexOf(" ")||/^\d/.test(i)?n.push("'"+i+"'"):n.push(i)}return n.join(",")}function S(t){return t.a+t.f}function k(t){var n="normal";return"o"===t.a?n="oblique":"i"===t.a&&(n="italic"),n}function T(t,n){this.c=t,this.f=t.o.document.documentElement,this.h=n,this.a=new x("-"),this.j=!1!==n.events,this.g=!1!==n.classes}function E(t){if(t.g){var n=d(t.f,t.a.c("wf","active")),e=[],i=[t.a.c("wf","loading")];n||e.push(t.a.c("wf","inactive")),p(t.f,e,i)}O(t,"inactive")}function O(t,n,e){t.j&&t.h[n]&&(e?t.h[n](e.c,S(e)):t.h[n]())}function A(){this.c={}}function C(t,n){this.c=t,this.f=n,this.a=l(this.c,"span",{"aria-hidden":"true"},this.f)}function N(t){h(t.c,"body",t.a)}function P(t){return"display:block;position:absolute;top:-9999px;left:-9999px;font-size:300px;width:auto;height:auto;line-height:normal;margin:0;padding:0;font-variant:normal;white-space:nowrap;font-family:"+_(t.c)+";font-style:"+k(t)+";font-weight:"+t.f+"00;"}function I(t,n,e,i,o,a){this.g=t,this.j=n,this.a=i,this.c=e,this.f=o||3e3,this.h=a||void 0}function B(t,n,e,i,o,a,s){this.v=t,this.B=n,this.c=e,this.a=i,this.s=s||"BESbswy",this.f={},this.w=o||3e3,this.u=a||null,this.m=this.j=this.h=this.g=null,this.g=new C(this.c,this.s),this.h=new C(this.c,this.s),this.j=new C(this.c,this.s),this.m=new C(this.c,this.s),t=P(t=new j(this.a.c+",serif",S(this.a))),this.g.a.style.cssText=t,t=P(t=new j(this.a.c+",sans-serif",S(this.a))),this.h.a.style.cssText=t,t=P(t=new j("serif",S(this.a))),this.j.a.style.cssText=t,t=P(t=new j("sans-serif",S(this.a))),this.m.a.style.cssText=t,N(this.g),N(this.h),N(this.j),N(this.m)}x.prototype.c=function(t){for(var n=[],e=0;e<arguments.length;e++)n.push(arguments[e].replace(/[\W_]+/g,"").toLowerCase());return n.join(this.a)},I.prototype.start=function(){var t=this.c.o.document,n=this,e=r(),i=new Promise(function(i,o){!function a(){var s;r()-e>=n.f?o():t.fonts.load((s=n.a,k(s)+" "+s.f+"00 300px "+_(s.c)),n.h).then(function(t){1<=t.length?i():setTimeout(a,25)},function(){o()})}()}),o=null,a=new Promise(function(t,e){o=setTimeout(e,n.f)});Promise.race([a,i]).then(function(){o&&(clearTimeout(o),o=null),n.g(n.a)},function(){n.j(n.a)})};var L={D:"serif",C:"sans-serif"},W=null;function F(){if(null===W){var t=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent);W=!!t&&(parseInt(t[1],10)<536||536===parseInt(t[1],10)&&parseInt(t[2],10)<=11)}return W}function M(t,n,e){for(var i in L)if(L.hasOwnProperty(i)&&n===t.f[L[i]]&&e===t.f[L[i]])return!0;return!1}function D(t,n){setTimeout(s(function(){u(this.g.a),u(this.h.a),u(this.j.a),u(this.m.a),n(this.a)},t),0)}function $(t,n,e){this.c=t,this.a=n,this.f=0,this.m=this.j=!1,this.s=e}B.prototype.start=function(){this.f.serif=this.j.a.offsetWidth,this.f["sans-serif"]=this.m.a.offsetWidth,this.A=r(),function t(n){var e,i=n.g.a.offsetWidth,o=n.h.a.offsetWidth;(e=i===n.f.serif&&o===n.f["sans-serif"])||(e=F()&&M(n,i,o)),e?r()-n.A>=n.w?F()&&M(n,i,o)&&(null===n.u||n.u.hasOwnProperty(n.a.c))?D(n,n.v):D(n,n.B):setTimeout(s(function(){t(this)},n),50):D(n,n.v)}(this)};var q=null;function H(t){0==--t.f&&t.j&&(t.m?((t=t.a).g&&p(t.f,[t.a.c("wf","active")],[t.a.c("wf","loading"),t.a.c("wf","inactive")]),O(t,"active")):E(t.a))}function z(t){this.j=t,this.a=new A,this.h=0,this.f=this.g=!0}function G(t,n){this.c=t,this.a=n}function K(t,n){this.c=t,this.a=n}function R(t,n){this.c=t||"https://fonts.googleapis.com/css",this.a=[],this.f=[],this.g=n||""}function U(t){this.f=t,this.a=[],this.c={}}$.prototype.g=function(t){var n=this.a;n.g&&p(n.f,[n.a.c("wf",t.c,S(t).toString(),"active")],[n.a.c("wf",t.c,S(t).toString(),"loading"),n.a.c("wf",t.c,S(t).toString(),"inactive")]),O(n,"fontactive",t),this.m=!0,H(this)},$.prototype.h=function(t){var n=this.a;if(n.g){var e=d(n.f,n.a.c("wf",t.c,S(t).toString(),"active")),i=[],o=[n.a.c("wf",t.c,S(t).toString(),"loading")];e||i.push(n.a.c("wf",t.c,S(t).toString(),"inactive")),p(n.f,i,o)}O(n,"fontinactive",t),H(this)},z.prototype.load=function(t){this.c=new c(this.j,t.context||this.j),this.g=!1!==t.events,this.f=!1!==t.classes,function(t,n,e){var i,o=[],a=e.timeout;(i=n).g&&p(i.f,[i.a.c("wf","loading")]),O(i,"loading");o=function(t,n,e){var i,o=[];for(i in n)if(n.hasOwnProperty(i)){var a=t.c[i];a&&o.push(a(n[i],e))}return o}(t.a,e,t.c);var r=new $(t.c,n,a);for(t.h=o.length,n=0,e=o.length;n<e;n++)o[n].load(function(n,e,i){var o,a,c,f,l,h;a=r,c=n,f=e,l=i,h=0==--(o=t).h,(o.f||o.g)&&setTimeout(function(){var t=l||null,n=f||{};if(0===c.length&&h)E(a.a);else{a.f+=c.length,h&&(a.j=h);var e,i=[];for(e=0;e<c.length;e++){var o=c[e],r=n[o.c],u=a.a,d=o;if(u.g&&p(u.f,[u.a.c("wf",d.c,S(d).toString(),"loading")]),O(u,"fontloading",d),(u=null)===q)if(window.FontFace){d=/Gecko.*Firefox\/(\d+)/.exec(window.navigator.userAgent);var g=/OS X.*Version\/10\..*Safari/.exec(window.navigator.userAgent)&&/Apple/.exec(window.navigator.vendor);q=d?42<parseInt(d[1],10):!g}else q=!1;u=q?new I(s(a.g,a),s(a.h,a),a.c,o,a.s,r):new B(s(a.g,a),s(a.h,a),a.c,o,a.s,t,r),i.push(u)}for(e=0;e<i.length;e++)i[e].start()}},0)})}(this,new T(this.c,t),t)},G.prototype.load=function(t){var n=this,e=n.a.projectId,i=n.a.version;if(e){var o=n.c.o;v(this.c,(n.a.api||"https://fast.fonts.net/jsapi")+"/"+e+".js"+(i?"?v="+i:""),function(i){i?t([]):(o["__MonotypeConfiguration__"+e]=function(){return n.a},function n(){if(o["__mti_fntLst"+e]){var i,a=o["__mti_fntLst"+e](),s=[];if(a)for(var r=0;r<a.length;r++){var c=a[r].fontfamily;null!=a[r].fontStyle&&null!=a[r].fontWeight?(i=a[r].fontStyle+a[r].fontWeight,s.push(new j(c,i))):s.push(new j(c))}t(s)}else setTimeout(function(){n()},50)}())}).id="__MonotypeAPIScript__"+e}else t([])},K.prototype.load=function(t){var n,e,i=this.a.urls||[],o=this.a.families||[],a=this.a.testStrings||{},s=new m;for(n=0,e=i.length;n<e;n++)g(this.c,i[n],y(s));var r=[];for(n=0,e=o.length;n<e;n++)if((i=o[n].split(":"))[1])for(var c=i[1].split(","),f=0;f<c.length;f+=1)r.push(new j(i[0],c[f]));else r.push(new j(i[0]));w(s,function(){t(r,a)})};var V={latin:"BESbswy","latin-ext":"çöüğş",cyrillic:"йяЖ",greek:"αβΣ",khmer:"កខគ",Hanuman:"កខគ"},X={thin:"1",extralight:"2","extra-light":"2",ultralight:"2","ultra-light":"2",light:"3",regular:"4",book:"4",medium:"5","semi-bold":"6",semibold:"6","demi-bold":"6",demibold:"6",bold:"7","extra-bold":"8",extrabold:"8","ultra-bold":"8",ultrabold:"8",black:"9",heavy:"9",l:"3",r:"4",b:"7"},J={i:"i",italic:"i",n:"n",normal:"n"},Q=/^(thin|(?:(?:extra|ultra)-?)?light|regular|book|medium|(?:(?:semi|demi|extra|ultra)-?)?bold|black|heavy|l|r|b|[1-9]00)?(n|i|normal|italic)?$/;function Y(t,n){this.c=t,this.a=n}var Z={Arimo:!0,Cousine:!0,Tinos:!0};function tt(t,n){this.c=t,this.a=n}function nt(t,n){this.c=t,this.f=n,this.a=[]}Y.prototype.load=function(t){var n=new m,e=this.c,i=new R(this.a.api,this.a.text),o=this.a.families;!function(t,n){for(var e=n.length,i=0;i<e;i++){var o=n[i].split(":");3==o.length&&t.f.push(o.pop());var a="";2==o.length&&""!=o[1]&&(a=":"),t.a.push(o.join(a))}}(i,o);var a=new U(o);!function(t){for(var n=t.f.length,e=0;e<n;e++){var i=t.f[e].split(":"),o=i[0].replace(/\+/g," "),a=["n4"];if(2<=i.length){var s;if(s=[],r=i[1])for(var r,c=(r=r.split(",")).length,f=0;f<c;f++){var l;if((l=r[f]).match(/^[\w-]+$/))if(null==(h=Q.exec(l.toLowerCase())))l="";else{if(l=null==(l=h[2])||""==l?"n":J[l],null==(h=h[1])||""==h)h="4";else var h=X[h]||(isNaN(h)?"4":h.substr(0,1));l=[l,h].join("")}else l="";l&&s.push(l)}0<s.length&&(a=s),3==i.length&&(s=[],0<(i=(i=i[2])?i.split(","):s).length&&(i=V[i[0]])&&(t.c[o]=i))}for(t.c[o]||(i=V[o])&&(t.c[o]=i),i=0;i<a.length;i+=1)t.a.push(new j(o,a[i]))}}(a),g(e,function(t){if(0==t.a.length)throw Error("No fonts to load!");if(-1!=t.c.indexOf("kit="))return t.c;for(var n=t.a.length,e=[],i=0;i<n;i++)e.push(t.a[i].replace(/ /g,"+"));return n=t.c+"?family="+e.join("%7C"),0<t.f.length&&(n+="&subset="+t.f.join(",")),0<t.g.length&&(n+="&text="+encodeURIComponent(t.g)),n}(i),y(n)),w(n,function(){t(a.a,a.c,Z)})},tt.prototype.load=function(t){var n=this.a.id,e=this.c.o;n?v(this.c,(this.a.api||"https://use.typekit.net")+"/"+n+".js",function(n){if(n)t([]);else if(e.Typekit&&e.Typekit.config&&e.Typekit.config.fn){n=e.Typekit.config.fn;for(var i=[],o=0;o<n.length;o+=2)for(var a=n[o],s=n[o+1],r=0;r<s.length;r++)i.push(new j(a,s[r]));try{e.Typekit.load({events:!1,classes:!1,async:!0})}catch(n){}t(i)}},2e3):t([])},nt.prototype.load=function(t){var n,e=this.f.id,i=this.c.o,o=this;e?(i.__webfontfontdeckmodule__||(i.__webfontfontdeckmodule__={}),i.__webfontfontdeckmodule__[e]=function(n,e){for(var i=0,a=e.fonts.length;i<a;++i){var s=e.fonts[i];o.a.push(new j(s.name,(l=f=c=void 0,c=4,f="n",l=null,(r="font-weight:"+s.weight+";font-style:"+s.style)&&((l=r.match(/(normal|oblique|italic)/i))&&l[1]&&(f=l[1].substr(0,1).toLowerCase()),(l=r.match(/([1-9]00|normal|bold)/i))&&l[1]&&(/bold/i.test(l[1])?c=7:/[1-9]00/.test(l[1])&&(c=parseInt(l[1].substr(0,1),10)))),f+c)))}var r,c,f,l;t(o.a)},v(this.c,(this.f.api||"https://f.fontdeck.com/s/css/js/")+((n=this.c).o.location.hostname||n.a.location.hostname)+"/"+e+".js",function(n){n&&t([])})):t([])};var et=new z(window);et.a.c.custom=function(t,n){return new K(n,t)},et.a.c.fontdeck=function(t,n){return new nt(n,t)},et.a.c.monotype=function(t,n){return new G(n,t)},et.a.c.typekit=function(t,n){return new tt(n,t)},et.a.c.google=function(t,n){return new Y(n,t)};var it={load:s(et.load,et)};void 0===(i=function(){return it}.call(n,e,n,t))||(t.exports=i)}()},function(t,n,e){e(2),t.exports=e(3)},function(t,n,e){"use strict";e.r(n);var i=e(0);e.n(i).a.load({google:{families:["Montserrat:300,400,500,600,700,900"]}});var o=document.getElementById("demo"),a=document.getElementById("play");a.addEventListener("click",function(){o.paused?(o.play(),a.classList.add("play")):(o.pause(),a.classList.remove("play"))})},function(t,n){}])});</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gymphy - Create Shareable Workouts</title>
+  <meta name="description" content="Create custom workout plans that you can share with your friends, family or students.">
+  <meta name="theme-color" content="#ff473a">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#ff473a">
+  <link rel="stylesheet" href="css/core.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/helpers.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/banner.css">
+  <link rel="stylesheet" href="css/overview.css">
+  <link rel="stylesheet" href="css/features.css">
+  <link rel="stylesheet" href="css/action.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+</head>
+<body>
+  <div class="notice">
+    <strong>Gymphy is currently closed. We are not accepting new sign ups at this stage and are currently working on version 2</strong>
+  </div>
+  <div class="banner">
+    <div class="container banner-container">
+      <div class="banner-inner">
+        <div class="header">
+          <a class="logo" href="/">
+            Gymphy
+          </a>
+          <nav class="menu">
+            <a class="menu-item" href="#overview">Overview</a>
+            <a class="menu-item" href="#features">Features</a>
+            <strong class="menu-item disabled">Sign up</strong>
+          </nav>
+        </div>
+        <div class="flex-m">
+          <div class="banner-content">
+            <h1 class="banner-title">
+              A new way to create shareable workouts
+            </h1>
+            <div class="banner-content-inner">
+              <p>
+                Create custom exercise plans that you can share with your friends, family or students. 
+              </p>
+              <p>
+                <strong class="banner-button button disabled">
+                  Currently Unavailable
+                </strong>
+              </p>
+            </div>
+          </div>
+          <div class="phone">
+            <div class="video">
+              <button class="banner-play" id="play">
+                <span class="sr">Play</span>
+              </button>
+              <video id="demo" class="banner-video" loop>
+                <source src="video/gymphy-demo.mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="overview" class="overview">
+    <div class="container">
+      <h2 class="fs-3 title">Overview</h2>
+      <div class="overview-inner">
+        <p>
+          A powerful web application built to work on mobile, tablet and desktop devices.
+        </p>
+      </div>
+      <ul class="overview-list">
+        <li class="overview-item overview-icon overview-icon-top">
+          <h3 class="overview-item-title">Sign up</h3>
+          <p class="overview-item-content">
+            Whether you're a personal trainer or a fitness junkie, joining is easy.
+          </p>
+        </li>
+        <li class="overview-item overview-icon overview-icon-strength">
+          <h3 class="overview-item-title">Create exercise plans</h3>
+          <p class="overview-item-content">
+            Give it a name, add rounds with sets, add custom exercises and breaks.
+          </p>
+        </li>
+        <li class="overview-item overview-icon overview-icon-whistle">
+          <h3 class="overview-item-title">Get active</h3>
+          <p class="overview-item-content">
+            Once you have created your workout, get moving and smash through it.
+          </p>
+        </li>
+        <li class="overview-item overview-icon overview-icon-watch">
+          <h3 class="overview-item-title">Share workouts</h3>
+          <p class="overview-item-content">
+            Send workout plans to friends, family or students or publish them online.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="features" class="features">
+    <div class="container">
+      <h2 class="fs-3 title">Features</h2>
+      <p>
+        All the good things packed in one small application
+      </p>
+      <ul class="features-list">
+        <li class="feature-item feature-icon feature-icon-timer">
+          <h3 class="feature-item-title">Smart timer</h3>
+          <p class="feature-item-content">
+            A timer that will notify you so you don't need to keep checking the time.
+          </p>
+        </li>
+        <li class="feature-item feature-icon feature-icon-rings">
+          <h3 class="feature-item-title">Discover profiles</h3>
+          <p class="feature-item-content">
+            View other profiles and there workout plans for inspiration.
+          </p>
+        </li>
+        <li class="feature-item feature-icon feature-icon-speaker">
+          <h3 class="feature-item-title">Workout assistant</h3>
+          <p class="feature-item-content">
+            Focus more on your workout and let the assistant speak out.
+          </p>
+        </li>
+        <li class="feature-item feature-icon feature-icon-shoe">
+          <h3 class="feature-item-title">Public workouts</h3>
+          <p class="feature-item-content">
+            All workouts are public and can be played anonymously.
+          </p>
+        </li>
+        <li class="feature-item feature-icon feature-icon-headphones">
+          <h3 class="feature-item-title">No distractions</h3>
+          <p class="feature-item-content">
+            Listen to your favourite music while performing the exercises.
+          </p>
+        </li>
+        <li class="feature-item feature-icon feature-icon-laptop">
+          <h3 class="feature-item-title">Universal platform</h3>
+          <p class="feature-item-content">
+            No app required. Just visit gymphy on a mobile, tablet or desktop device.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="action-block">
+    <div class="container">
+      <h2 class="fs-3 title-secondary">Ready to get started?</h2>
+      <div class="action-block-inner">
+        <strong class="action-button button disabled" href="#">Sign up for free</strong>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <p class="no-margin">
+        Copyright 2019 - 2021 Gymphy. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,26 +1,28 @@
-// Features
-
 .features {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background: $dark-grey;
-  color: $white;
-  @include breakpoint(m) {
+  background: #212121;
+  color: #fff;
+}
+.features .title {
+  color: #fff;
+}
+.features .title:after {
+  background: #fff;
+}
+@media only screen and (min-width: 768px) {
+  .features {
     padding-top: 80px;
     padding-bottom: 80px;
   }
-  .title {
-    color: $white;
-    &:after {
-      background: $white;
-    }
-  }
 }
 .features-inner {
-  color: $grey;
+  color: #454545;
   padding: 20px;
-  @include breakpoint(m) {
+}
+@media only screen and (min-width: 768px) {
+  .features-inner {
     padding: 20px 100px;
   }
 }
@@ -28,11 +30,15 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  @include breakpoint(m) {
+}
+@media only screen and (min-width: 768px) {
+  .features-list {
     display: flex;
     flex-wrap: wrap;
   }
-  @include breakpoint(l) {
+}
+@media only screen and (min-width: 980px) {
+  .features-list {
     padding: 0 100px;
   }
 }
@@ -42,12 +48,16 @@
   line-height: 20px;
   text-align: center;
   padding: 16px 60px;
-  color: $light-grey;
-  @include breakpoint(m) {
+  color: #ccc;
+}
+@media only screen and (min-width: 768px) {
+  .feature-item {
     width: 33.33334%;
     padding-right: 40px;
   }
-  @include breakpoint(l) {
+}
+@media only screen and (min-width: 980px) {
+  .feature-item {
     padding-right: 40px;
   }
 }
@@ -56,14 +66,14 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 600;
-  color: $white;
+  color: #fff;
 }
 .feature-link {
   color: #fff;
-  &:hover, &:focus {
+}
+.feature-link:hover, .feature-link:focus {
     color: #fff;
   }
-}
 
 .feature-icon:before {
   content: '';

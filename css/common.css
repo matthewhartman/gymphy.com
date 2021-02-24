@@ -1,0 +1,19 @@
+.title {
+  display: inline-block;
+  position: relative;
+}
+.title:after {
+  content: '';
+  width: 20px;
+  height: 3px;
+  background: #212121;
+  display: block;
+  margin: 10px auto;
+}
+
+.title-secondary { color: #fff; }
+
+.button {
+  text-decoration: none;
+  transition: .3s all;
+}
